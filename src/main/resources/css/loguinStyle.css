@@ -5,3 +5,7 @@
 .footerInfo{
     -fx-border-color: #b3b3b3;
 }
+
+.buttonEntrar{
+    -fx-background-color: #25274d;
+}
