@@ -3,13 +3,13 @@ package model;
 public class Usuario {
     private int cpf;
     private String nome;
-    private String endereco;
+    private Endereco endereco;
 
     public Usuario() {
 
     }
 
-    public Usuario(int cpf, String nome, String endereco) {
+    public Usuario(int cpf, String nome, Endereco endereco) {
         this.cpf = cpf;
         this.nome = nome;
         this.endereco = endereco;
@@ -31,11 +31,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 }
