@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="Adicionar primeiro model - Teste">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Aluno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Disciplina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="Primeiro Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +33,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29KvSv6JuX0QQvGqZLbcwEIKSoC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
