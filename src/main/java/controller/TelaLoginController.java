@@ -25,10 +25,14 @@ public class TelaLoginController implements Initializable {
 
     }
 
+    @FXML
     public void logar(){
-        boolean isVisible = !msgErroLogin.isVisible();
-        if(isVisible){
+
+        if(msgErroLogin.isVisible()){
+            msgErroLogin.setVisible(false);
+        }else{
             msgErroLogin.setVisible(true);
+            msgErroLogin.setText("Sua senha esta errada!");
         }
     }
 }

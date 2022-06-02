@@ -49,7 +49,7 @@
                               <Insets />
                            </VBox.margin>
                         </PasswordField>
-                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="136.0" styleClass="buttonEntrar" stylesheets="@../css/loguinStyle.css" text="Entrar" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#logar" prefHeight="40.0" prefWidth="136.0" styleClass="buttonEntrar" stylesheets="@../css/loguinStyle.css" text="Entrar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
