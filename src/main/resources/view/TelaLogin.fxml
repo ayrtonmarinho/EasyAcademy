@@ -28,7 +28,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="618.0" prefWidth="244.0" spacing="12.0">
                      <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgLogotipo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <VBox.margin>
                               <Insets top="-90.0" />
                            </VBox.margin>
@@ -38,13 +38,13 @@
                               <Font name="System Bold" size="30.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" />
+                        <TextField fx:id="txtUser" alignment="CENTER" />
                         <Label layoutX="78.0" layoutY="284.0" text="Senha">
                            <font>
                               <Font name="System Bold" size="30.0" />
                            </font>
                         </Label>
-                        <PasswordField alignment="CENTER">
+                        <PasswordField fx:id="txtPass" alignment="CENTER">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
