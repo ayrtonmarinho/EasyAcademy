@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RegEx.java" afterDir="false" />
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="Primeiro Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FXMLController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/scene.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29KvSv6JuX0QQvGqZLbcwEIKSoC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -81,14 +84,6 @@
       <option name="presentableId" value="Default" />
       <updated>1652874599441</updated>
     </task>
-    <task id="LOCAL-00001" summary="[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx">
-      <created>1654195539126</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654195539126</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,10 +96,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
