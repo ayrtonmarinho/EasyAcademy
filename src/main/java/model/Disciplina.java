@@ -1,8 +1,11 @@
 package model;
 
-public class Disciplina {
+import java.io.Serializable;
+
+public class Disciplina implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String codigo;
-    private String descricao;
+    private String nome;
     private String periodo;
 
     public Disciplina(){
@@ -11,7 +14,7 @@ public class Disciplina {
 
     public Disciplina(String codigo, String descricao, String periodo) {
         this.codigo = codigo;
-        this.descricao = descricao;
+        this.nome = descricao;
         this.periodo = periodo;
     }
 
@@ -23,12 +26,12 @@ public class Disciplina {
         this.codigo = codigo;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getPeriodo() {

@@ -1,7 +1,9 @@
 package model;
+import java.io.Serializable;
 import java.util.List;
 
-public class Aluno extends Usuario{
+public class Aluno extends Usuario implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String matricula;
     private List<Disciplina> discpMat; // Disciplinas matriculadas no semestre vigente
 
