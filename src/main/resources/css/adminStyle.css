@@ -1,0 +1,30 @@
+.borderTitle{
+    /*-fx-border-color: #b3b3b3;*/
+    -fx-background-color: #336699;
+}
+
+.textTitle{
+    -fx-text-fill: white;
+}
+
+.idComponent{
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #b3b3b3;
+}
+
+
+
+.logout:hover {
+    -fx-text-fill: red;
+}
+
+.button {
+    -fx-background-color: #204060;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+}
+
+.button:hover{
+    -fx-border-color: #4d79ff;
+    -fx-border-width: 5;
+}
