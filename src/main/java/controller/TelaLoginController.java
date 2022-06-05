@@ -32,7 +32,7 @@ public class TelaLoginController implements Initializable {
     private ImageView imgLogotipo;
 
     @FXML
-    private ObservableList<Usuario> users = FXCollections.observableArrayList();
+    private ObservableList<Usuario> users;
 
     private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
 
