@@ -5,13 +5,14 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import model.Aluno;
 import model.Usuario;
 import utils.ResourceManager;
 
 
+import java.io.File;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -24,49 +25,36 @@ public class TelaLoginController implements Initializable {
     @FXML
     private TextField txtUser;
     @FXML
-    private TextField txtPass;
+    private PasswordField txtPass;
     @FXML
     private ImageView imgLogotipo;
 
+    private File file = new File("listaUsuarios");
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(file.exists()){
 
-    }
-
-    @FXML
-    public void logar(){
-
-        if(msgErroLogin.isVisible()){
-            msgErroLogin.setVisible(false);
-        }else{
-            msgErroLogin.setVisible(true);
-            msgErroLogin.setText("Sua senha esta errada!");
         }
     }
 
     @FXML
+    public void logar(){
+        if(txtUser.getText().isEmpty() && txtPass.getText().isEmpty()){
+            msgErroLogin.setText("Campos de login e senha obrigatórios");
+            msgErroLogin.setVisible(true);
+        } else if (txtUser.getText().equals("admin") && txtPass.getText().equals("admin")) {
+            
+        }
+    }
+
     private ObservableList<Usuario> carregarUsuarios() {
         try {
-            List<Usuario> list = (List<Usuario>) ResourceManager.load("ListaTurmas");
+            List<Usuario> list = (List<Usuario>) ResourceManager.load("listaUsuarios");
             return FXCollections.observableArrayList(list);
         } catch (Exception ex) {
             Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return FXCollections.emptyObservableList();
-
     }
-
-    /*
-    @FXML
-    private void salvarListaTurmas() {
-        ArrayList<Turma> tempList = new ArrayList<>(listTurma);
-
-        try {
-            ResourceManager.save(tempList, "ListaTurmas");
-        } catch (Exception ex) {
-            Logger.getLogger(TelaProfessorController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-     */
 }

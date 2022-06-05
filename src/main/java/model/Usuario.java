@@ -7,7 +7,6 @@ public class Usuario implements Serializable {
     private int cpf;
     private String nome;
     private Endereco endereco;
-
     private String senha;
 
     public Usuario() {
