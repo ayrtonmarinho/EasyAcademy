@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Atualização:&#10;- Ajustes nos models">
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Atualização:&#10;- Correção de função&#10;- Add Arquivo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaCadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaCadastro.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654444617332</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[Ayrton] Atualização:&#10;- Correção de função">
+      <created>1654460710038</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654460710038</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Ayrton] Atualização:&#10;- Correção de função&#10;- Add Arquivo">
+      <created>1654460750480</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654460750480</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +137,9 @@
     <MESSAGE value="[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx" />
     <MESSAGE value="[Ayrton] Atualização:&#10;- Correções e testes em função do controller de TelaLogin.fxml" />
     <MESSAGE value="[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml" />
+    <MESSAGE value="[Ayrton] Atualização:&#10;- Correção de função" />
+    <MESSAGE value="[Ayrton] Atualização:&#10;- Correção de função&#10;- Add Arquivo" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Atualização:&#10;- Correção de função&#10;- Add Arquivo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

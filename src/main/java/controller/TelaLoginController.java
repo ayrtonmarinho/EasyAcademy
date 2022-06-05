@@ -65,7 +65,7 @@ public class TelaLoginController implements Initializable {
         return FXCollections.emptyObservableList();
     }
 
-    @FXML
+    //Salvar
     private void salvarUsuarios() {
         ArrayList<Usuario> tempList = new ArrayList<>(users);
 
