@@ -14,10 +14,12 @@ import utils.ResourceManager;
 
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 public class TelaLoginController implements Initializable {
     @FXML
@@ -29,12 +31,17 @@ public class TelaLoginController implements Initializable {
     @FXML
     private ImageView imgLogotipo;
 
-    private File file = new File("listaUsuarios");
+    @FXML
+    private ObservableList<Usuario> users = FXCollections.observableArrayList();
+
+    private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if(file.exists()){
-
+            System.out.println("Foi");
+        }else{
+            salvarUsuarios();
         }
     }
 
@@ -44,17 +51,28 @@ public class TelaLoginController implements Initializable {
             msgErroLogin.setText("Campos de login e senha obrigatórios");
             msgErroLogin.setVisible(true);
         } else if (txtUser.getText().equals("admin") && txtPass.getText().equals("admin")) {
-            
+            users = carregarUsuarios();
         }
     }
 
     private ObservableList<Usuario> carregarUsuarios() {
         try {
-            List<Usuario> list = (List<Usuario>) ResourceManager.load("listaUsuarios");
+            List<Usuario> list = (List<Usuario>) ResourceManager.load("src/main/resources/Arquivos/listaUsuarios.pjt");
             return FXCollections.observableArrayList(list);
         } catch (Exception ex) {
             Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return FXCollections.emptyObservableList();
+    }
+
+    @FXML
+    private void salvarUsuarios() {
+        ArrayList<Usuario> tempList = new ArrayList<>(users);
+
+        try {
+            ResourceManager.save(tempList, "src/main/resources/Arquivos/listaUsuarios.pjt");
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

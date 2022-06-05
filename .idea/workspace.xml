@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Atualização:&#10;- Correções e testes em função do controller de TelaLogin.fxml">
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Atualização:&#10;- Ajustes nos models">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaCadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaCadastro.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +35,20 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29KvSv6JuX0QQvGqZLbcwEIKSoC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654202213130</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml">
+      <created>1654444617332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654444617332</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,7 +123,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx" />
     <MESSAGE value="[Ayrton] Atualização:&#10;- Correções e testes em função do controller de TelaLogin.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Atualização:&#10;- Correções e testes em função do controller de TelaLogin.fxml" />
+    <MESSAGE value="[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
