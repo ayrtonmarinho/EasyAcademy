@@ -2,17 +2,25 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import model.Usuario;
 import utils.ResourceManager;
 
 
+import javax.swing.*;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,24 +42,42 @@ public class TelaLoginController implements Initializable {
     @FXML
     private ObservableList<Usuario> users;
 
+    private Usuario usuario;
+
     private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if(file.exists()){
-            System.out.println("Foi");
+            users = carregarUsuarios();
         }else{
             salvarUsuarios();
         }
     }
 
     @FXML
-    public void logar(){
+    public void logar(ActionEvent event) throws IOException {
         if(txtUser.getText().isEmpty() && txtPass.getText().isEmpty()){
             msgErroLogin.setText("Campos de login e senha obrigatórios");
             msgErroLogin.setVisible(true);
         } else if (txtUser.getText().equals("admin") && txtPass.getText().equals("admin")) {
-            users = carregarUsuarios();
+            usuario = new Usuario();
+            usuario.setCpf("777777777-77");
+            usuario.setNome("ADMINISTRADOR ALTO NÍVEL");
+            FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAdmin.fxml"));
+
+            Parent root = fxmloader.load();
+            Scene novaCena = new Scene(root);
+            //Da acesso ao controller do ExibirAluno;
+            TelaAdminController controller = fxmloader.getController();
+            controller.initData(usuario);
+            //Pega a informação do Stage
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(novaCena);
+            window.show();
+            //Change to the next screen;
+        }else if (checkCredencials()){
+
         }
     }
 
@@ -75,4 +101,15 @@ public class TelaLoginController implements Initializable {
             Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    private boolean checkCredencials(){
+        for(Usuario usuario : users){
+            if(usuario.getCpf().compareTo(txtUser.getText())==0 && usuario.getSenha().compareTo(txtPass.getText())==0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }

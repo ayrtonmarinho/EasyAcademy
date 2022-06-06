@@ -1,5 +1,6 @@
 package model;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno extends Usuario implements Serializable {
@@ -16,10 +17,11 @@ public class Aluno extends Usuario implements Serializable {
         this.discpMat = discpMat;
     }
 
-    public Aluno(int cpf, String nome, Endereco endereco, String matricula, List<Disciplina> discpMat) {
+    public Aluno(String cpf, String nome, Endereco endereco, String matricula, Disciplina discpMat) {
         super(cpf, nome, endereco);
         this.matricula = matricula;
-        this.discpMat = discpMat;
+        this.discpMat = new ArrayList<>() {
+        };
     }
 
     public String getMatricula() {
@@ -34,7 +36,7 @@ public class Aluno extends Usuario implements Serializable {
         return discpMat;
     }
 
-    public void setDiscpMat(List<Disciplina> discpMat) {
-        this.discpMat = discpMat;
+    public void setDiscpMat(Disciplina discpMat) {
+        this.discpMat.add(discpMat);
     }
 }

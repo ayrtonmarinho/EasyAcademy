@@ -9,6 +9,8 @@ public class Endereco implements Serializable {
     private String numero;
     private String complemento;
 
+    private String cidade;
+
     public Endereco(){
 
     }
@@ -50,5 +52,13 @@ public class Endereco implements Serializable {
 
     public void setComplemento(String complemento) {
         this.complemento = complemento;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 }

@@ -12,7 +12,7 @@ public class Professor extends Usuario implements Serializable {
         this.discpLec = discpLec;
     }
 
-    public Professor(int cpf, String nome, Endereco endereco, String matricula, List<Disciplina> discpLec) {
+    public Professor(String cpf, String nome, Endereco endereco, String matricula, List<Disciplina> discpLec) {
         super(cpf, nome, endereco);
         this.matricula = matricula;
         this.discpLec = discpLec;
