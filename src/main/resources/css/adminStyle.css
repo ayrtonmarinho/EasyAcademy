@@ -18,13 +18,24 @@
     -fx-text-fill: red;
 }
 
-.button {
+.buttonSquare {
     -fx-background-color: #204060;
     -fx-text-fill: white;
     -fx-border-width: 0;
 }
 
-.button:hover{
+.buttonSquare:hover{
     -fx-border-color: #4d79ff;
     -fx-border-width: 5;
+}
+
+.buttonSair {
+    -fx-background-color: none;
+    -fx-text-fill: black;
+    -fx-border-width: 0;
+}
+
+.buttonSair:hover{
+    -fx-text-fill: red;
+    -fx-border-width: 0;
 }

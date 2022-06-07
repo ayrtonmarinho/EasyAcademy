@@ -1,0 +1,53 @@
+.borderTitle{
+    /*-fx-border-color: #b3b3b3;*/
+    -fx-background-color: #00b3b3;
+}
+
+.textTitle{
+    -fx-text-fill: white;
+}
+
+.idComponent{
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #b3b3b3;
+}
+
+
+
+.logout:hover {
+    -fx-text-fill: red;
+}
+
+.button {
+    -fx-background-color: #009999;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+}
+
+.button:hover{
+    -fx-border-color: #00264d;
+    -fx-border-width: 1;
+}
+
+.subtitle-cadastrar{
+    -fx-background-color: #b3cce6;
+}
+
+.bordaCampos{
+    -fx-border-color: gray;
+}
+
+.bordaUserName{
+    -fx-border-color: gray;
+}
+
+.buttonFaltas{
+    -fx-background-color: #ff5050;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+}
+
+.buttonFaltas:hover{
+     -fx-border-color: #00264d;
+     -fx-border-width: 1;
+}

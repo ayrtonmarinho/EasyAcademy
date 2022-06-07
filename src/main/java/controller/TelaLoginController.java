@@ -68,7 +68,7 @@ public class TelaLoginController implements Initializable {
             Parent root = fxmloader.load();
             Scene novaCena = new Scene(root);
             //Da acesso ao controller do ExibirAluno;
-            TelaCadastroController controller = fxmloader.getController();
+            TelaAdminController controller = fxmloader.getController();
             controller.initData(usuario);
             //Pega a informação do Stage
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -83,7 +83,7 @@ public class TelaLoginController implements Initializable {
                 Parent root = fxmloader.load();
                 Scene novaCena = new Scene(root);
                 //Da acesso ao controller do ExibirAluno;
-                TelaCadastroController controller = fxmloader.getController();
+                TelaAdminController controller = fxmloader.getController();
                 controller.initData(usuario);
                 //Pega a informação do Stage
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

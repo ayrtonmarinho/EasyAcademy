@@ -12,11 +12,12 @@ public class Usuario implements Serializable {
 
     private char acesso; // E - estudante; A - admin; P - professor
 
-    private List<Telefone> telefone;
     private String senha;
 
+    private Telefone telefone;
+
     public Usuario() {
-        this.telefone = new ArrayList<>();
+
 
     }
 
@@ -24,7 +25,7 @@ public class Usuario implements Serializable {
         this.cpf = cpf;
         this.nome = nome;
         this.endereco = endereco;
-        this.telefone = new ArrayList<>();
+
     }
 
     public String getCpf() {
@@ -59,19 +60,19 @@ public class Usuario implements Serializable {
         this.senha = senha;
     }
 
-    public List<Telefone> getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(Telefone telefone) {
-        this.telefone.add(telefone);
-    }
-
     public char getAcesso() {
         return acesso;
     }
 
     public void setAcesso(char acesso) {
         this.acesso = acesso;
+    }
+
+    public Telefone getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Telefone telefone) {
+        this.telefone = telefone;
     }
 }
