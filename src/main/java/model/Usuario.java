@@ -10,7 +10,7 @@ public class Usuario implements Serializable {
     private String nome;
     private Endereco endereco;
 
-    private char acesso;
+    private char acesso; // E - estudante; A - admin; P - professor
 
     private List<Telefone> telefone;
     private String senha;

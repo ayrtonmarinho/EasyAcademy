@@ -40,7 +40,7 @@ public class TelaLoginController implements Initializable {
     private ImageView imgLogotipo;
 
     @FXML
-    private ObservableList<Usuario> users;
+    private ObservableList<Usuario> users = FXCollections.observableArrayList();
 
     private Usuario usuario;
 
@@ -77,7 +77,42 @@ public class TelaLoginController implements Initializable {
             window.show();
             //Change to the next screen;
         }else if (checkCredencials()){
+            Usuario user = getUsuario();
 
+            if(user.getAcesso() == 'A'){
+                FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAdmin.fxml"));
+                Parent root = fxmloader.load();
+                Scene novaCena = new Scene(root);
+                //Da acesso ao controller do ExibirAluno;
+                TelaAdminController controller = fxmloader.getController();
+                controller.initData(usuario);
+                //Pega a informação do Stage
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(novaCena);
+                window.show();
+            } else if (user.getAcesso() == 'E') {
+                FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAluno.fxml"));
+                Parent root = fxmloader.load();
+                Scene novaCena = new Scene(root);
+                //Da acesso ao controller do Exibir Aluno;
+                TelaAlunoController controller = fxmloader.getController();
+                controller.initData(usuario);
+                //Pega a informação do Stage
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(novaCena);
+                window.show();
+            } else if (user.getAcesso() == 'P') {
+                FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaProfessor.fxml"));
+                Parent root = fxmloader.load();
+                Scene novaCena = new Scene(root);
+                //Da acesso ao controller do Tela Professor;
+                TelaProfessorController controller = fxmloader.getController();
+                controller.initData(usuario);
+                //Pega a informação do Stage
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(novaCena);
+                window.show();
+            }
         }
     }
 
@@ -94,7 +129,6 @@ public class TelaLoginController implements Initializable {
     //Salvar
     private void salvarUsuarios() {
         ArrayList<Usuario> tempList = new ArrayList<>(users);
-
         try {
             ResourceManager.save(tempList, "src/main/resources/Arquivos/listaUsuarios.pjt");
         } catch (Exception ex) {
@@ -111,5 +145,13 @@ public class TelaLoginController implements Initializable {
         return false;
     }
 
-
+    private Usuario getUsuario(){
+        for(Usuario user : users){
+            if(user.getCpf().compareTo(txtUser.getText()) == 0){
+                usuario = user;
+                return user;
+            }
+        }
+        return null;
+    }
 }
