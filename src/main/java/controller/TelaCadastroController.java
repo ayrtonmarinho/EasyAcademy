@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TelaAdminController implements Initializable {
+public class TelaCadastroController implements Initializable {
 
     private Usuario user;
 

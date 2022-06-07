@@ -5,31 +5,21 @@ import java.util.List;
 
 public class Aluno extends Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
-    private String matricula;
     private List<Disciplina> discpMat; // Disciplinas matriculadas no semestre vigente
 
+    private int  creditos;
     public Aluno(){
 
     }
 
-    public Aluno(String matricula, List<Disciplina> discpMat) {
-        this.matricula = matricula;
+    public Aluno(List<Disciplina> discpMat) {
         this.discpMat = discpMat;
     }
 
-    public Aluno(String cpf, String nome, Endereco endereco, String matricula, Disciplina discpMat) {
+    public Aluno(String cpf, String nome, Endereco endereco, Disciplina discpMat) {
         super(cpf, nome, endereco);
-        this.matricula = matricula;
-        this.discpMat = new ArrayList<>() {
-        };
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+        this.discpMat = new ArrayList<>();
+        this.creditos = 24;
     }
 
     public List<Disciplina> getDiscpMat() {
@@ -38,5 +28,17 @@ public class Aluno extends Usuario implements Serializable {
 
     public void setDiscpMat(Disciplina discpMat) {
         this.discpMat.add(discpMat);
+    }
+
+    public int getCreditos() {
+        return creditos;
+    }
+
+    public boolean subCredito(int valor){
+        if(this.creditos>=valor){
+            this.creditos -= valor;
+            return true;
+        }
+        return false;
     }
 }

@@ -18,7 +18,6 @@ import model.Usuario;
 import utils.ResourceManager;
 
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -69,7 +68,7 @@ public class TelaLoginController implements Initializable {
             Parent root = fxmloader.load();
             Scene novaCena = new Scene(root);
             //Da acesso ao controller do ExibirAluno;
-            TelaAdminController controller = fxmloader.getController();
+            TelaCadastroController controller = fxmloader.getController();
             controller.initData(usuario);
             //Pega a informação do Stage
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -84,7 +83,7 @@ public class TelaLoginController implements Initializable {
                 Parent root = fxmloader.load();
                 Scene novaCena = new Scene(root);
                 //Da acesso ao controller do ExibirAluno;
-                TelaAdminController controller = fxmloader.getController();
+                TelaCadastroController controller = fxmloader.getController();
                 controller.initData(usuario);
                 //Pega a informação do Stage
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

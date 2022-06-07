@@ -1,29 +1,21 @@
 package model;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Professor extends Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
-    private String matricula;
     private List<Disciplina> discpLec; // Lista de disciplinas lecionadas no semestre vigente
 
-    public Professor(String matricula, List<Disciplina> discpLec) {
-        this.matricula = matricula;
-        this.discpLec = discpLec;
+    private int cadeiras;
+
+    public Professor(List<Disciplina> discpLec) {
+        this.discpLec = new ArrayList<>(8);
     }
 
-    public Professor(String cpf, String nome, Endereco endereco, String matricula, List<Disciplina> discpLec) {
+    public Professor(String cpf, String nome, Endereco endereco, List<Disciplina> discpLec) {
         super(cpf, nome, endereco);
-        this.matricula = matricula;
-        this.discpLec = discpLec;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+        this.discpLec = new ArrayList<>(8);
     }
 
     public List<Disciplina> getDiscpLec() {

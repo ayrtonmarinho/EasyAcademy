@@ -1,14 +1,17 @@
 package model;
 
-public class Notas {
+public class Desempenho {
     private static final long serialVersionUID = 1L;
     private float nota;
-    private String matricula;
+
+    private int faltas;
+
+    private String cpf;
     private String codDisciplina;
     private String nomeDisciplina; //temporario a nivel de testes de implementação
     private String codTurma;
 
-    public Notas() {
+    public Desempenho() {
     }
 
     public float getNota() {
@@ -17,14 +20,6 @@ public class Notas {
 
     public void setNota(float nota) {
         this.nota = nota;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
     }
 
     public String getCodDisciplina() {
@@ -49,5 +44,21 @@ public class Notas {
 
     public void setCodTurma(String codTurma) {
         this.codTurma = codTurma;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public int getFaltas() {
+        return faltas;
+    }
+
+    public void setFaltas(int faltas) {
+        this.faltas = faltas;
     }
 }
