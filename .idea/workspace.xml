@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml" />
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/TelaAlterarUsuario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaAluno.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaAluno.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,21 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/view",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\view" />
+      <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\java" />
@@ -153,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654692911838</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml">
+      <created>1654693040667</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654693040667</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml">
+      <created>1654693220741</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654693220742</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
