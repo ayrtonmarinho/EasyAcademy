@@ -1,6 +1,8 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Turma implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -12,7 +14,12 @@ public class Turma implements Serializable {
     private String turno;
     private Professor codProfessor;
 
+    private Professor professor;
+
+    private List<Aluno> alunos;
+
     public Turma() {
+        this.alunos = new ArrayList<>(25);
 
     }
 
@@ -55,4 +62,22 @@ public class Turma implements Serializable {
     public void setNomeDisciplina() {
         this.nomeDisciplina = codDisciplina.getNome();
     }
+
+    public void setNomeDisciplina(String nomeDisciplina) {
+        this.nomeDisciplina = nomeDisciplina;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+
 }

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/TelaAlterarUsuario.fxml" afterDir="false" />
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaAluno.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaAluno.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Turma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Turma.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654693220742</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml">
+      <created>1654696274525</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654696274525</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +203,8 @@
     <MESSAGE value="[Ayrton] Adições:&#10;- Tela CadastroDisicplina&#10;- Tela CadastroTurma&#10;- Tela Atribuir (nota e faltas)" />
     <MESSAGE value="[Ayrton] Continuidade e adição de telas." />
     <MESSAGE value="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml" />
+    <MESSAGE value="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
