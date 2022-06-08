@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Atualizando Cadastro de Usuário">
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] GitIgnore dos Infernooooo">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -219,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654729825743</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="[Ayrton] GitIgnore dos Infernooooo">
+      <created>1654730521706</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654730521707</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +256,8 @@
     <MESSAGE value="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml" />
     <MESSAGE value="[Ayrton] Ultima view adicionada" />
     <MESSAGE value="[Ayrton] Atualizando Cadastro de Usuário" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Atualizando Cadastro de Usuário" />
+    <MESSAGE value="[Ayrton] GitIgnore dos Infernooooo" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] GitIgnore dos Infernooooo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
