@@ -9,7 +9,7 @@ EasyAcademy is an academic project. It is a MVP software to manange users and se
 
 ### How to use our software?
 First of everything you need to download [Java jdk 18+](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html) and [Gradle 7.4.2+](https://gradle.org/install/).
-After that you can clone the project, wait all loading from gradle dependencys  and execute a build using a terminal from your IDE.
+After that you can clone the project, wait all loading from gradle dependencys  and execute a build command using the terminal from your IDE.
 
 Theses commands can be used:
 
