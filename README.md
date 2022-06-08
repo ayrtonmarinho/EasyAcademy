@@ -3,7 +3,7 @@
 EasyAcademy is an academic project. It is a MVP software to manange users and services offered by the university. This services are like:
 - Register a new user, that can be an admin, a student or a professor. Also can be registered new courses and university classes.
 - Admin have acess to register new users and change them, register new courses and new university classes.
-- Professors can give grades to the students in each university class, also they can give absences.
+- Professors can give grades to the students in each university class that they are in, also they can give absences.
 - Students can download monthly fee tickets and registration certificate. Register for a new class its possible too.
 - Also, students and professors can change some data of their own. Register for new classe lessoning its possible too.
 
