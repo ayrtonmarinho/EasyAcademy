@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml">
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Professor.java" afterDir="false" />
@@ -179,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654696274525</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados">
+      <created>1654697311561</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654697311561</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +211,9 @@
     <MESSAGE value="[Ayrton] Continuidade e adição de telas." />
     <MESSAGE value="[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml" />
     <MESSAGE value="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml" />
+    <MESSAGE value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados" />
+    <MESSAGE value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

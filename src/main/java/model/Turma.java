@@ -14,9 +14,7 @@ public class Turma implements Serializable {
     private String turno;
     private Professor codProfessor;
 
-    private Professor professor;
-
-    private List<Aluno> alunos;
+    private List<String> alunos; //Por cpf;
 
     public Turma() {
         this.alunos = new ArrayList<>(25);
@@ -67,15 +65,7 @@ public class Turma implements Serializable {
         this.nomeDisciplina = nomeDisciplina;
     }
 
-    public Professor getProfessor() {
-        return professor;
-    }
-
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
-    }
-
-    public List<Aluno> getAlunos() {
+    public List<String> getAlunos() {
         return alunos;
     }
 

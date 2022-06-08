@@ -8,7 +8,7 @@ public class Aluno extends Usuario implements Serializable {
 
 
     private int  creditos;
-    private String[] turmas; //cod.Turma
+    private List<String> turmas; //cod.Turma
     public Aluno(){
 
     }
@@ -17,7 +17,7 @@ public class Aluno extends Usuario implements Serializable {
 
     public Aluno(String cpf, String nome, Endereco endereco, Disciplina discpMat) {
         super(cpf, nome, endereco);
-        this.turmas = new String[8];
+        this.turmas = new ArrayList<>(8);
         this.creditos = 24;
     }
 
@@ -33,5 +33,9 @@ public class Aluno extends Usuario implements Serializable {
             return true;
         }
         return false;
+    }
+
+    public List<String> getTurmas() {
+        return turmas;
     }
 }
