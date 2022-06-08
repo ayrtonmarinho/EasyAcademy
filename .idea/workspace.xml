@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/infoAcademicaStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/professorLecionarStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/InfoAcademica.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ProfessorLecionar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Turma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Turma.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/view",
+    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -54,8 +55,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\view" />
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
+      <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\java" />
@@ -186,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654697311561</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2">
+      <created>1654698787898</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654698787898</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

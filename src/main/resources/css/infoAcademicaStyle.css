@@ -1,0 +1,45 @@
+.borderTitle{
+    /*-fx-border-color: #b3b3b3;*/
+    -fx-background-color: #6468b4;
+}
+
+.textTitle{
+    -fx-text-fill: white;
+}
+
+.idComponent{
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #b3b3b3;
+}
+
+
+
+.logout:hover {
+    -fx-text-fill: red;
+}
+
+.button {
+    -fx-background-color: #004d99;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-border-color: #00264d;
+    -fx-border-width: 1;
+}
+
+.buttonSair {
+    -fx-background-color: none;
+    -fx-text-fill: black;
+    -fx-border-width: 0;
+}
+
+.buttonSair:hover{
+    -fx-text-fill: red;
+
+}
+
+.bordaCampos{
+    -fx-border-color: gray;
+}
