@@ -189,7 +189,7 @@
                                                       <Font name="System Bold" size="15.0" />
                                                    </font>
                                                 </Label>
-                                                <Label layoutX="10.0" layoutY="10.0" text="creditos">
+                                                <Label layoutX="10.0" layoutY="10.0" text="creditoss">
                                                    <font>
                                                       <Font size="15.0" />
                                                    </font>
