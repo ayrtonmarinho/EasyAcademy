@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/downloadDocsStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/TelaDownloadDocs.fxml" afterDir="false" />
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Ultima view adicionada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,17 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654706935910</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[Ayrton] Ultima view adicionada">
+      <created>1654709538635</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654709538635</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +233,8 @@
     <MESSAGE value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados" />
     <MESSAGE value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2" />
     <MESSAGE value="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml" />
+    <MESSAGE value="[Ayrton] Ultima view adicionada" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Ultima view adicionada" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

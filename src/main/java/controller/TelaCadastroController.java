@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,13 +11,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import model.Endereco;
-import model.Telefone;
-import model.Usuario;
+import model.*;
+import utils.ResourceManager;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TelaCadastroController implements Initializable {
 
@@ -66,9 +72,27 @@ public class TelaCadastroController implements Initializable {
     @FXML
     private ToggleGroup cad_toggleSelect;
 
+    private ObservableList<Usuario> users;
+
+    private ObservableList<Aluno> alunos;
+
+    private ObservableList<Professor> professores;
+
+    private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
+
+    private File fileA = new File("src/main/resources/Arquivos/listaAlunos.pjt");
+
+    private File fileP = new File("src/main/resources/Arquivos/listaProfessores.pjt");
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        if(file.exists()){
+            users = carregarUsuarios();
+        }else{
+            salvarUsuarios();
+        }
     }
 
     public void cadastrar(){
@@ -98,6 +122,23 @@ public class TelaCadastroController implements Initializable {
             user.setTelefone(telefone);
             user.setNome(cad_txtNome.getText());
             user.setCpf(cad_txtCpf.getText());
+
+            if(user.getAcesso()=='E'){
+                Aluno aluno = (Aluno)user;
+                alunos.add(aluno);
+                salvarAlunos();
+                mensagemSucesso(aluno.getNome(),aluno.getAcesso());
+            }else if(user.getAcesso()=='P'){
+                Professor professor = (Professor) user;
+                professores.add(professor);
+                salvarProfessores();
+                mensagemSucesso(professor.getNome(), professor.getAcesso());
+            }else{
+                users.add(user);
+                salvarUsuarios();
+                mensagemSucesso(user.getNome(),user.getAcesso());
+            }
+            clearFields();
         }
     }
 
@@ -135,6 +176,7 @@ public class TelaCadastroController implements Initializable {
             Alert msgAlert = new Alert(Alert.AlertType.ERROR);
             msgAlert.setTitle("Campos vazios");
             msgAlert.setContentText(msg.toString());
+            msgAlert.showAndWait();
             return false;
         }
     }
@@ -157,5 +199,88 @@ public class TelaCadastroController implements Initializable {
         user = usuario;
         nomeAdmin.setText(user.getNome());
         matriculaAdmin.setText(user.getCpf());
+    }
+
+    private void clearFields(){
+        //limpar os campos
+    }
+    public void mensagemSucesso(String nome, char acesso){
+
+        Alert mensagem = new Alert(Alert.AlertType.INFORMATION);
+        mensagem.setTitle("Confirmação de Cadastro");
+        if(acesso=='E'){
+            mensagem.setContentText("O aluno "+nome+" foi cadastrado com sucesso!");
+        }else if(acesso=='P'){
+            mensagem.setContentText("O professor "+nome+" foi cadastrado com sucesso!");
+        }else{
+            mensagem.setContentText("O usuário "+nome+" foi cadastrado com sucesso como administrador!");
+        }
+        mensagem.showAndWait();
+    }
+
+    public void mensagemErro(String mensagem){
+        Alert erro = new Alert(Alert.AlertType.WARNING);
+        erro.setTitle("Aviso");
+        erro.setContentText(mensagem);
+        erro.showAndWait();
+    }
+
+    //Salvar no arquivo
+    private void salvarUsuarios() {
+        ArrayList<Usuario> tempList = new ArrayList<>(users);
+        try {
+            ResourceManager.save(tempList, "src/main/resources/Arquivos/listaUsuarios.pjt");
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void salvarAlunos() {
+        ArrayList<Aluno> tempList = new ArrayList<>(alunos);
+        try {
+            ResourceManager.save(tempList, "src/main/resources/Arquivos/listaAlunos.pjt");
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void salvarProfessores() {
+        ArrayList<Professor> tempList = new ArrayList<>(professores);
+        try {
+            ResourceManager.save(tempList, "src/main/resources/Arquivos/listaProfessores.pjt");
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    //Carregar do Arquivo
+    private ObservableList<Usuario> carregarUsuarios() {
+        try {
+            List<Usuario> list = (List<Usuario>) ResourceManager.load("src/main/resources/Arquivos/listaUsuarios.pjt");
+            return FXCollections.observableArrayList(list);
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return FXCollections.emptyObservableList();
+    }
+
+    private ObservableList<Aluno> carregarAlunos() {
+        try {
+            List<Aluno> list = (List<Aluno>) ResourceManager.load("src/main/resources/Arquivos/listaAlunos.pjt");
+            return FXCollections.observableArrayList(list);
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return FXCollections.emptyObservableList();
+    }
+
+    private ObservableList<Professor> carregarProfessores() {
+        try {
+            List<Professor> list = (List<Professor>) ResourceManager.load("src/main/resources/Arquivos/listaProfessores.pjt");
+            return FXCollections.observableArrayList(list);
+        } catch (Exception ex) {
+            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return FXCollections.emptyObservableList();
     }
 }
