@@ -337,7 +337,7 @@
                               </HBox>
                               <HBox alignment="TOP_CENTER" prefHeight="63.0" prefWidth="1259.0">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="358.0" stylesheets="@../css/cadUserStyle.css" text="Cadastrar">
+                                    <Button mnemonicParsing="false" onAction="#cadastrar" prefHeight="66.0" prefWidth="358.0" stylesheets="@../css/cadUserStyle.css" text="Cadastrar">
                                        <font>
                                           <Font name="System Bold" size="28.0" />
                                        </font>
