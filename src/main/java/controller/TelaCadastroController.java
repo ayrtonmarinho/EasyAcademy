@@ -58,7 +58,7 @@ public class TelaCadastroController implements Initializable {
     private TextField cad_txtComplemento;
 
     @FXML
-    private TextField cad_txtTelefone;
+    private TextField cad_txtTel;
 
     @FXML
     private RadioButton cad_radioProfessor;
@@ -72,11 +72,11 @@ public class TelaCadastroController implements Initializable {
     @FXML
     private ToggleGroup cad_toggleSelect;
 
-    private ObservableList<Usuario> users;
+    private ObservableList<Usuario> users = FXCollections.observableArrayList();
 
-    private ObservableList<Aluno> alunos;
+    private ObservableList<Aluno> alunos = FXCollections.observableArrayList();
 
-    private ObservableList<Professor> professores;
+    private ObservableList<Professor> professores = FXCollections.observableArrayList();
 
     private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
 
@@ -87,11 +87,14 @@ public class TelaCadastroController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        if(file.exists()){
+        if(file.exists()) {
             users = carregarUsuarios();
-        }else{
-            salvarUsuarios();
+        }
+        if(fileA.exists()) {
+            alunos = carregarAlunos();
+        }
+        if(fileP.exists()){
+            professores = carregarProfessores();
         }
     }
 
@@ -111,29 +114,43 @@ public class TelaCadastroController implements Initializable {
         }
 
         if(checarCampos()){
-            telefone.setDdd(cad_txtTelefone.getText().substring(0, 1));
-            telefone.setNumero(cad_txtTelefone.getText().substring(2, 10));
+
+            telefone.setDdd(cad_txtTel.getText().substring(0, 1));
+            telefone.setNumero(cad_txtTel.getText().substring(2, 10));
             endereco.setNumero(cad_txtNum.getText());
             endereco.setCep(cad_txtCep.getText());
             endereco.setCidade(cad_txtCidade.getText());
             endereco.setRua(cad_txtRua.getText());
             endereco.setComplemento(cad_txtComplemento.getText());
-            user.setEndereco(endereco);
-            user.setTelefone(telefone);
-            user.setNome(cad_txtNome.getText());
-            user.setCpf(cad_txtCpf.getText());
 
             if(user.getAcesso()=='E'){
-                Aluno aluno = (Aluno)user;
+                Aluno aluno = new Aluno();
+                aluno.setEndereco(endereco);
+                aluno.setTelefone(telefone);
+                aluno.setNome(cad_txtNome.getText());
+                aluno.setCpf(cad_txtCpf.getText());
+                aluno.setSenha("123mudar");
+                aluno.setAcesso('E');
                 alunos.add(aluno);
                 salvarAlunos();
                 mensagemSucesso(aluno.getNome(),aluno.getAcesso());
             }else if(user.getAcesso()=='P'){
-                Professor professor = (Professor) user;
+                Professor professor = new Professor();
+                professor.setEndereco(endereco);
+                professor.setTelefone(telefone);
+                professor.setNome(cad_txtNome.getText());
+                professor.setCpf(cad_txtCpf.getText());
+                professor.setSenha("123mudar");
+                professor.setAcesso('P');
                 professores.add(professor);
                 salvarProfessores();
                 mensagemSucesso(professor.getNome(), professor.getAcesso());
             }else{
+                user.setEndereco(endereco);
+                user.setTelefone(telefone);
+                user.setNome(cad_txtNome.getText());
+                user.setCpf(cad_txtCpf.getText());
+                user.setSenha("123mudar");
                 users.add(user);
                 salvarUsuarios();
                 mensagemSucesso(user.getNome(),user.getAcesso());
@@ -166,8 +183,10 @@ public class TelaCadastroController implements Initializable {
         if(cad_txtComplemento.getText().isEmpty()){
             msg.append("Complemento vazio\n");
         }
-        if(cad_txtTelefone.getText().isEmpty()){
+        if(cad_txtTel.getText().isEmpty()){
             msg.append("Telefone vazio\n");
+        }else if(cad_txtTel.getText().length() < 11){
+            msg.append("DDD obrigatorio!\n");
         }
 
         if(msg.isEmpty()){
@@ -203,6 +222,18 @@ public class TelaCadastroController implements Initializable {
 
     private void clearFields(){
         //limpar os campos
+        cad_txtNome.clear();
+        cad_txtCep.clear();
+        cad_txtCidade.clear();
+        cad_txtCpf.clear();
+        cad_txtMat.clear();
+        cad_txtComplemento.clear();
+        cad_txtRua.clear();
+        cad_txtTel.clear();
+        cad_txtNum.clear();
+        cad_radioAdmin.setSelected(false);
+        cad_radioAluno.setSelected(false);
+        cad_radioProfessor.setSelected(false);
     }
     public void mensagemSucesso(String nome, char acesso){
 
@@ -282,5 +313,20 @@ public class TelaCadastroController implements Initializable {
             Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return FXCollections.emptyObservableList();
+    }
+
+    public void voltar(ActionEvent event) throws IOException {
+        FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAdmin.fxml"));
+        Parent novaCenaParent = fxmloader.load();
+        Scene novaCena = new Scene(novaCenaParent);
+        TelaAdminController controller = fxmloader.getController();
+        user.setNome(nomeAdmin.getText());
+        user.setCpf(matriculaAdmin.getText());
+        controller.initData(user);
+        //Pega a informação do Stage
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        //novaCena.setFill(javafx.scene.paint.Color.TRANSPARENT);
+        window.setScene(novaCena);
+        window.show();
     }
 }
