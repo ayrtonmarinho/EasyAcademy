@@ -75,11 +75,11 @@
                                     <Insets right="20.0" />
                                  </padding>
                                  <children>
-                                    <Label styleClass="logout" stylesheets="@../css/alunoStyle.css" text="Voltar">
+                                    <Button mnemonicParsing="false" onAction="#voltar" text="Sair">
                                        <font>
-                                          <Font name="System Bold" size="16.0" />
+                                          <Font name="System Bold" size="15.0" />
                                        </font>
-                                    </Label>
+                                    </Button>
                                  </children>
                               </HBox>
                            </children>
