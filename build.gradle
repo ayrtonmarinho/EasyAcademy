@@ -25,4 +25,12 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
+sourceSets {
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
 mainClassName = 'org.openjfx.MainApp'
