@@ -14,6 +14,8 @@ public class Turma implements Serializable {
     private String turno;
     private Professor codProfessor;
 
+    private String horario;
+
     private List<String> alunos; //Por cpf;
 
     public Turma() {
@@ -69,5 +71,11 @@ public class Turma implements Serializable {
         return alunos;
     }
 
+    public String getHorario() {
+        return horario;
+    }
 
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
 }

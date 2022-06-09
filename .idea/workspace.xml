@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Tentanto corrigir o erro de testes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroDisciplinaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Alertas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs).">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroTurmaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Disciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Disciplina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/cadDisciplinaStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/cadDisciplinaStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Turma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Turma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaCadastroDisciplina.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaCadastroDisciplina.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaCadastroTurma.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaCadastroTurma.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
@@ -74,7 +71,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="org.openjfx.MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.openjfx.MainApp" />
       <module name="EasyAcademy.main" />
       <extension name="coverage">
@@ -230,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654774256364</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs).">
+      <created>1654790729913</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654790729913</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,7 +264,8 @@
     <MESSAGE value="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml" />
     <MESSAGE value="[Ayrton] Ultima view adicionada" />
     <MESSAGE value="[Ayrton] Tentanto corrigir o erro de testes" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Tentanto corrigir o erro de testes" />
+    <MESSAGE value="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs)." />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

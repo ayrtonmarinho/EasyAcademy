@@ -77,6 +77,21 @@ public class TelaAdminController implements Initializable {
         window.show();
     }
 
+    public void goCadastroTurma(ActionEvent event) throws IOException {
+        FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaCadastroTurma.fxml"));
+        Parent root = fxmloader.load();
+        Scene novaCena = new Scene(root);
+        //Da acesso ao controller do ExibirAluno;
+        TelaCadastroTurmaController controller = fxmloader.getController();
+        user.setNome(nomeAdmin.getText());
+        user.setCpf(matriculaAdmin.getText());
+        controller.initData(user);
+        //Pega a informação do Stage
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(novaCena);
+        window.show();
+    }
+
     public void initData(Usuario usuario){
         user = usuario;
         nomeAdmin.setText(user.getNome());
