@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import model.*;
 import utils.ResourceManager;
+import utils.Alertas;
 
 import java.io.File;
 import java.io.IOException;
@@ -113,7 +114,7 @@ public class TelaCadastroController implements Initializable {
 
         }
 
-        if(checarCampos()){
+        if(checarCampos() && !checarCpf()){
 
             telefone.setDdd(cad_txtTel.getText().substring(0, 1));
             telefone.setNumero(cad_txtTel.getText().substring(2, 10));
@@ -198,6 +199,30 @@ public class TelaCadastroController implements Initializable {
             msgAlert.showAndWait();
             return false;
         }
+    }
+
+    public boolean checarCpf(){
+        boolean jaExiste = false;
+        StringBuilder msg = new StringBuilder();
+
+        for(Usuario usuario : users){
+            if(usuario.getCpf().compareTo(cad_txtCpf.getText())==0)
+                jaExiste = true;
+        }
+        for(Professor professor : professores){
+            if(professor.getCpf().compareTo(cad_txtCpf.getText())==0)
+                jaExiste = true;
+        }
+        for(Aluno aluno : alunos){
+            if(aluno.getCpf().compareTo(cad_txtCpf.getText())==0)
+                jaExiste = true;
+        }
+
+        if(jaExiste){
+            Alertas.alertaErro("CPF em conflito", "Usuário já existente", "");
+        }
+
+        return jaExiste;
     }
 
     //Teste

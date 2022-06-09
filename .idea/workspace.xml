@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Implementação do controller de Cadastrar Turmas e pequenas alterações.">
+    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs).">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_16_04_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2022_16_04__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_06_2022_23_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_06_2022_23_05__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_06_2022_23_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_06_2022_23_18__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaCadastroTurma.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaCadastroTurma.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Arquivos/listaAlunos.pjt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Arquivos/listaAlunos.pjt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Arquivos/listaProfessores.pjt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Arquivos/listaProfessores.pjt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projetos Java Unicap\EasyAcademy\src\main\resources\css" />
@@ -230,14 +237,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654790729913</updated>
     </task>
-    <task id="LOCAL-00021" summary="[Ayrton] Implementação do controller de Cadastrar Turmas e pequenas alterações.">
-      <created>1654810937859</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1654810937859</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,8 +268,18 @@
     <MESSAGE value="[Ayrton] Ultima view adicionada" />
     <MESSAGE value="[Ayrton] Tentanto corrigir o erro de testes" />
     <MESSAGE value="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs)." />
-    <MESSAGE value="[Ayrton] Implementação do controller de Cadastrar Turmas e pequenas alterações." />
-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Implementação do controller de Cadastrar Turmas e pequenas alterações." />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Implementação do controller de Cadastrar Disciplinas e Adicão de uma classe util para alertas (msgs)." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
