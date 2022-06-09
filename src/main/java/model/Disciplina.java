@@ -8,6 +8,12 @@ public class Disciplina implements Serializable {
     private String nome;
     private String periodo;
 
+    private int creditos;
+
+    private String cargaHoraria;
+
+
+
     public Disciplina(){
 
     }
@@ -42,4 +48,19 @@ public class Disciplina implements Serializable {
         this.periodo = periodo;
     }
 
+    public String getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(String cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    public int getCreditos() {
+        return creditos;
+    }
+
+    public void setCreditos(int creditos) {
+        this.creditos = creditos;
+    }
 }
