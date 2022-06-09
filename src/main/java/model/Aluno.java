@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Aluno extends Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
-
-
     private int  creditos;
     private List<String> turmas; //cod.Turma
     public Aluno(){

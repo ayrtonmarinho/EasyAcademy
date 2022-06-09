@@ -1,11 +1,11 @@
 package model;
 
-public class Desempenho {
+import java.io.Serializable;
+
+public class Desempenho implements Serializable{
     private static final long serialVersionUID = 1L;
     private float nota;
-
     private int faltas;
-
     private String cpf;
     private String codDisciplina;
     private String nomeDisciplina; //temporario a nivel de testes de implementação

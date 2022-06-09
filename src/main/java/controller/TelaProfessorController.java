@@ -12,7 +12,6 @@ public class TelaProfessorController implements Initializable {
 
     }
 
-
     public void initData(Usuario usuario){
 
     }

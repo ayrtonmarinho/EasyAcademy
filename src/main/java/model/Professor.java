@@ -7,6 +7,10 @@ public class Professor extends Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     private List<String> turmasLecionadas; //cod.Turma
 
+    public Professor(){
+
+    }
+
     public Professor(List<Disciplina> discpLec) {
         this.turmasLecionadas = new ArrayList<>(6);
     }

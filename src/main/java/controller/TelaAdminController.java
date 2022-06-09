@@ -38,8 +38,6 @@ public class TelaAdminController implements Initializable {
         //novaCena.setFill(javafx.scene.paint.Color.TRANSPARENT);
         window.setScene(novaCena);
         window.show();
-
-
     }
 
     public void goCadastro(ActionEvent event) throws IOException {

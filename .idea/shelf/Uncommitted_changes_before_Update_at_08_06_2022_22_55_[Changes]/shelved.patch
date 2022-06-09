@@ -1,0 +1,613 @@
+Index: src/main/java/model/Desempenho.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\n\r\npublic class Desempenho {\r\n    private static final long serialVersionUID = 1L;\r\n    private float nota;\r\n\r\n    private int faltas;\r\n\r\n    private String cpf;\r\n    private String codDisciplina;\r\n    private String nomeDisciplina; //temporario a nivel de testes de implementação\r\n    private String codTurma;\r\n\r\n    public Desempenho() {\r\n    }\r\n\r\n    public float getNota() {\r\n        return nota;\r\n    }\r\n\r\n    public void setNota(float nota) {\r\n        this.nota = nota;\r\n    }\r\n\r\n    public String getCodDisciplina() {\r\n        return codDisciplina;\r\n    }\r\n\r\n    public void setCodDisciplina(String codDisciplina) {\r\n        this.codDisciplina = codDisciplina;\r\n    }\r\n\r\n    public String getNomeDisciplina() {\r\n        return nomeDisciplina;\r\n    }\r\n\r\n    public void setNomeDisciplina(String nomeDisciplina) {\r\n        this.nomeDisciplina = nomeDisciplina;\r\n    }\r\n\r\n    public String getCodTurma() {\r\n        return codTurma;\r\n    }\r\n\r\n    public void setCodTurma(String codTurma) {\r\n        this.codTurma = codTurma;\r\n    }\r\n\r\n    public String getCpf() {\r\n        return cpf;\r\n    }\r\n\r\n    public void setCpf(String cpf) {\r\n        this.cpf = cpf;\r\n    }\r\n\r\n    public int getFaltas() {\r\n        return faltas;\r\n    }\r\n\r\n    public void setFaltas(int faltas) {\r\n        this.faltas = faltas;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/model/Desempenho.java b/src/main/java/model/Desempenho.java
+--- a/src/main/java/model/Desempenho.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/model/Desempenho.java	(date 1654733202366)
+@@ -1,11 +1,11 @@
+ package model;
+ 
+-public class Desempenho {
++import java.io.Serializable;
++
++public class Desempenho implements Serializable{
+     private static final long serialVersionUID = 1L;
+     private float nota;
+-
+     private int faltas;
+-
+     private String cpf;
+     private String codDisciplina;
+     private String nomeDisciplina; //temporario a nivel de testes de implementação
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" default=\"true\" project-jdk-name=\"18\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/.idea/misc.xml	(date 1654729866222)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="18" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/controller/TelaProfessorController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\r\n\r\nimport javafx.fxml.Initializable;\r\nimport model.Usuario;\r\n\r\nimport java.net.URL;\r\nimport java.util.ResourceBundle;\r\n\r\npublic class TelaProfessorController implements Initializable {\r\n    @Override\r\n    public void initialize(URL location, ResourceBundle resources) {\r\n\r\n    }\r\n\r\n\r\n    public void initData(Usuario usuario){\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/TelaProfessorController.java b/src/main/java/controller/TelaProfessorController.java
+--- a/src/main/java/controller/TelaProfessorController.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/controller/TelaProfessorController.java	(date 1654739350365)
+@@ -12,7 +12,6 @@
+ 
+     }
+ 
+-
+     public void initData(Usuario usuario){
+ 
+     }
+Index: src/main/java/controller/TelaCadastroController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\r\n\r\nimport javafx.collections.FXCollections;\r\nimport javafx.collections.ObservableList;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.*;\r\nimport javafx.stage.Stage;\r\nimport model.*;\r\nimport utils.ResourceManager;\r\n\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.net.URL;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.ResourceBundle;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\npublic class TelaCadastroController implements Initializable {\r\n\r\n    private Usuario user;\r\n\r\n    @FXML\r\n    private Label nomeAdmin;\r\n\r\n    @FXML\r\n    private Label matriculaAdmin;\r\n\r\n    @FXML\r\n    private TextField cad_txtNome;\r\n\r\n    @FXML\r\n    private TextField cad_txtCpf;\r\n\r\n    @FXML\r\n    private TextField cad_txtMat;\r\n\r\n    @FXML\r\n    private TextField cad_txtRua;\r\n\r\n    @FXML\r\n    private TextField cad_txtNum;\r\n\r\n    @FXML\r\n    private TextField cad_txtCep;\r\n\r\n    @FXML\r\n    private TextField cad_txtCidade;\r\n\r\n    @FXML\r\n    private TextField cad_txtComplemento;\r\n\r\n    @FXML\r\n    private TextField cad_txtTelefone;\r\n\r\n    @FXML\r\n    private RadioButton cad_radioProfessor;\r\n\r\n    @FXML\r\n    private RadioButton cad_radioAluno;\r\n\r\n    @FXML\r\n    private RadioButton cad_radioAdmin;\r\n\r\n    @FXML\r\n    private ToggleGroup cad_toggleSelect;\r\n\r\n    private ObservableList<Usuario> users;\r\n\r\n    private ObservableList<Aluno> alunos;\r\n\r\n    private ObservableList<Professor> professores;\r\n\r\n    private File file = new File(\"src/main/resources/Arquivos/listaUsuarios.pjt\");\r\n\r\n    private File fileA = new File(\"src/main/resources/Arquivos/listaAlunos.pjt\");\r\n\r\n    private File fileP = new File(\"src/main/resources/Arquivos/listaProfessores.pjt\");\r\n\r\n\r\n    @Override\r\n    public void initialize(URL location, ResourceBundle resources) {\r\n\r\n        if(file.exists()){\r\n            users = carregarUsuarios();\r\n        }else{\r\n            salvarUsuarios();\r\n        }\r\n    }\r\n\r\n    public void cadastrar(){\r\n        Usuario user = new Usuario();\r\n        Endereco endereco = new Endereco();\r\n        Telefone telefone = new Telefone();\r\n\r\n        if(cad_radioAdmin.isSelected()){\r\n            user.setAcesso('A');\r\n        } else if (cad_radioAluno.isSelected()) {\r\n            user.setAcesso('E');\r\n        } else if (cad_radioProfessor.isSelected()) {\r\n            user.setAcesso('P');\r\n        }else{\r\n\r\n        }\r\n\r\n        if(checarCampos()){\r\n            telefone.setDdd(cad_txtTelefone.getText().substring(0, 1));\r\n            telefone.setNumero(cad_txtTelefone.getText().substring(2, 10));\r\n            endereco.setNumero(cad_txtNum.getText());\r\n            endereco.setCep(cad_txtCep.getText());\r\n            endereco.setCidade(cad_txtCidade.getText());\r\n            endereco.setRua(cad_txtRua.getText());\r\n            endereco.setComplemento(cad_txtComplemento.getText());\r\n            user.setEndereco(endereco);\r\n            user.setTelefone(telefone);\r\n            user.setNome(cad_txtNome.getText());\r\n            user.setCpf(cad_txtCpf.getText());\r\n\r\n            if(user.getAcesso()=='E'){\r\n                Aluno aluno = (Aluno)user;\r\n                alunos.add(aluno);\r\n                salvarAlunos();\r\n                mensagemSucesso(aluno.getNome(),aluno.getAcesso());\r\n            }else if(user.getAcesso()=='P'){\r\n                Professor professor = (Professor) user;\r\n                professores.add(professor);\r\n                salvarProfessores();\r\n                mensagemSucesso(professor.getNome(), professor.getAcesso());\r\n            }else{\r\n                users.add(user);\r\n                salvarUsuarios();\r\n                mensagemSucesso(user.getNome(),user.getAcesso());\r\n            }\r\n            clearFields();\r\n        }\r\n    }\r\n\r\n    public boolean checarCampos(){\r\n        StringBuilder msg = new StringBuilder();\r\n\r\n        if(cad_txtNome.getText().isEmpty()){\r\n            msg.append(\"Nome vazio\\n\");\r\n        }\r\n        if(cad_txtCpf.getText().isEmpty()){\r\n            msg.append(\"CPF vazio\\n\");\r\n        }\r\n        if(cad_txtRua.getText().isEmpty()){\r\n            msg.append(\"Rua vazio\\n\");\r\n        }\r\n        if(cad_txtNum.getText().isEmpty()){\r\n            msg.append(\"Número vazio\\n\");\r\n        }\r\n        if(cad_txtCep.getText().isEmpty()){\r\n            msg.append(\"CEP vazio\\n\");\r\n        }\r\n        if(cad_txtCidade.getText().isEmpty()){\r\n            msg.append(\"Cidade vazio\\n\");\r\n        }\r\n        if(cad_txtComplemento.getText().isEmpty()){\r\n            msg.append(\"Complemento vazio\\n\");\r\n        }\r\n        if(cad_txtTelefone.getText().isEmpty()){\r\n            msg.append(\"Telefone vazio\\n\");\r\n        }\r\n\r\n        if(msg.isEmpty()){\r\n            return true;\r\n        }else{\r\n            Alert msgAlert = new Alert(Alert.AlertType.ERROR);\r\n            msgAlert.setTitle(\"Campos vazios\");\r\n            msgAlert.setContentText(msg.toString());\r\n            msgAlert.showAndWait();\r\n            return false;\r\n        }\r\n    }\r\n\r\n    //Teste\r\n    public void deslogar(ActionEvent event) throws IOException {\r\n        FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaLogin.fxml\"));\r\n\r\n        Parent root = fxmloader.load();\r\n        Scene novaCena = new Scene(root);\r\n\r\n        //Pega a informação do Stage\r\n        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n        novaCena.setFill(javafx.scene.paint.Color.TRANSPARENT);\r\n        window.setScene(novaCena);\r\n        window.show();\r\n    }\r\n\r\n    public void initData(Usuario usuario){\r\n        user = usuario;\r\n        nomeAdmin.setText(user.getNome());\r\n        matriculaAdmin.setText(user.getCpf());\r\n    }\r\n\r\n    private void clearFields(){\r\n        //limpar os campos\r\n    }\r\n    public void mensagemSucesso(String nome, char acesso){\r\n\r\n        Alert mensagem = new Alert(Alert.AlertType.INFORMATION);\r\n        mensagem.setTitle(\"Confirmação de Cadastro\");\r\n        if(acesso=='E'){\r\n            mensagem.setContentText(\"O aluno \"+nome+\" foi cadastrado com sucesso!\");\r\n        }else if(acesso=='P'){\r\n            mensagem.setContentText(\"O professor \"+nome+\" foi cadastrado com sucesso!\");\r\n        }else{\r\n            mensagem.setContentText(\"O usuário \"+nome+\" foi cadastrado com sucesso como administrador!\");\r\n        }\r\n        mensagem.showAndWait();\r\n    }\r\n\r\n    public void mensagemErro(String mensagem){\r\n        Alert erro = new Alert(Alert.AlertType.WARNING);\r\n        erro.setTitle(\"Aviso\");\r\n        erro.setContentText(mensagem);\r\n        erro.showAndWait();\r\n    }\r\n\r\n    //Salvar no arquivo\r\n    private void salvarUsuarios() {\r\n        ArrayList<Usuario> tempList = new ArrayList<>(users);\r\n        try {\r\n            ResourceManager.save(tempList, \"src/main/resources/Arquivos/listaUsuarios.pjt\");\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    private void salvarAlunos() {\r\n        ArrayList<Aluno> tempList = new ArrayList<>(alunos);\r\n        try {\r\n            ResourceManager.save(tempList, \"src/main/resources/Arquivos/listaAlunos.pjt\");\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    private void salvarProfessores() {\r\n        ArrayList<Professor> tempList = new ArrayList<>(professores);\r\n        try {\r\n            ResourceManager.save(tempList, \"src/main/resources/Arquivos/listaProfessores.pjt\");\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    //Carregar do Arquivo\r\n    private ObservableList<Usuario> carregarUsuarios() {\r\n        try {\r\n            List<Usuario> list = (List<Usuario>) ResourceManager.load(\"src/main/resources/Arquivos/listaUsuarios.pjt\");\r\n            return FXCollections.observableArrayList(list);\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n        return FXCollections.emptyObservableList();\r\n    }\r\n\r\n    private ObservableList<Aluno> carregarAlunos() {\r\n        try {\r\n            List<Aluno> list = (List<Aluno>) ResourceManager.load(\"src/main/resources/Arquivos/listaAlunos.pjt\");\r\n            return FXCollections.observableArrayList(list);\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n        return FXCollections.emptyObservableList();\r\n    }\r\n\r\n    private ObservableList<Professor> carregarProfessores() {\r\n        try {\r\n            List<Professor> list = (List<Professor>) ResourceManager.load(\"src/main/resources/Arquivos/listaProfessores.pjt\");\r\n            return FXCollections.observableArrayList(list);\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n        return FXCollections.emptyObservableList();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/TelaCadastroController.java b/src/main/java/controller/TelaCadastroController.java
+--- a/src/main/java/controller/TelaCadastroController.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/controller/TelaCadastroController.java	(date 1654739167863)
+@@ -58,7 +58,7 @@
+     private TextField cad_txtComplemento;
+ 
+     @FXML
+-    private TextField cad_txtTelefone;
++    private TextField cad_txtTel;
+ 
+     @FXML
+     private RadioButton cad_radioProfessor;
+@@ -72,11 +72,11 @@
+     @FXML
+     private ToggleGroup cad_toggleSelect;
+ 
+-    private ObservableList<Usuario> users;
++    private ObservableList<Usuario> users = FXCollections.observableArrayList();
+ 
+-    private ObservableList<Aluno> alunos;
++    private ObservableList<Aluno> alunos = FXCollections.observableArrayList();
+ 
+-    private ObservableList<Professor> professores;
++    private ObservableList<Professor> professores = FXCollections.observableArrayList();
+ 
+     private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
+ 
+@@ -87,11 +87,14 @@
+ 
+     @Override
+     public void initialize(URL location, ResourceBundle resources) {
+-
+-        if(file.exists()){
++        if(file.exists()) {
+             users = carregarUsuarios();
+-        }else{
+-            salvarUsuarios();
++        }
++        if(fileA.exists()) {
++            alunos = carregarAlunos();
++        }
++        if(fileP.exists()){
++            professores = carregarProfessores();
+         }
+     }
+ 
+@@ -111,29 +114,43 @@
+         }
+ 
+         if(checarCampos()){
+-            telefone.setDdd(cad_txtTelefone.getText().substring(0, 1));
+-            telefone.setNumero(cad_txtTelefone.getText().substring(2, 10));
++
++            telefone.setDdd(cad_txtTel.getText().substring(0, 1));
++            telefone.setNumero(cad_txtTel.getText().substring(2, 10));
+             endereco.setNumero(cad_txtNum.getText());
+             endereco.setCep(cad_txtCep.getText());
+             endereco.setCidade(cad_txtCidade.getText());
+             endereco.setRua(cad_txtRua.getText());
+             endereco.setComplemento(cad_txtComplemento.getText());
+-            user.setEndereco(endereco);
+-            user.setTelefone(telefone);
+-            user.setNome(cad_txtNome.getText());
+-            user.setCpf(cad_txtCpf.getText());
+ 
+             if(user.getAcesso()=='E'){
+-                Aluno aluno = (Aluno)user;
++                Aluno aluno = new Aluno();
++                aluno.setEndereco(endereco);
++                aluno.setTelefone(telefone);
++                aluno.setNome(cad_txtNome.getText());
++                aluno.setCpf(cad_txtCpf.getText());
++                aluno.setSenha("123mudar");
++                aluno.setAcesso('E');
+                 alunos.add(aluno);
+                 salvarAlunos();
+                 mensagemSucesso(aluno.getNome(),aluno.getAcesso());
+             }else if(user.getAcesso()=='P'){
+-                Professor professor = (Professor) user;
++                Professor professor = new Professor();
++                professor.setEndereco(endereco);
++                professor.setTelefone(telefone);
++                professor.setNome(cad_txtNome.getText());
++                professor.setCpf(cad_txtCpf.getText());
++                professor.setSenha("123mudar");
++                professor.setAcesso('P');
+                 professores.add(professor);
+                 salvarProfessores();
+                 mensagemSucesso(professor.getNome(), professor.getAcesso());
+             }else{
++                user.setEndereco(endereco);
++                user.setTelefone(telefone);
++                user.setNome(cad_txtNome.getText());
++                user.setCpf(cad_txtCpf.getText());
++                user.setSenha("123mudar");
+                 users.add(user);
+                 salvarUsuarios();
+                 mensagemSucesso(user.getNome(),user.getAcesso());
+@@ -166,8 +183,10 @@
+         if(cad_txtComplemento.getText().isEmpty()){
+             msg.append("Complemento vazio\n");
+         }
+-        if(cad_txtTelefone.getText().isEmpty()){
++        if(cad_txtTel.getText().isEmpty()){
+             msg.append("Telefone vazio\n");
++        }else if(cad_txtTel.getText().length() < 11){
++            msg.append("DDD obrigatorio!\n");
+         }
+ 
+         if(msg.isEmpty()){
+@@ -203,6 +222,18 @@
+ 
+     private void clearFields(){
+         //limpar os campos
++        cad_txtNome.clear();
++        cad_txtCep.clear();
++        cad_txtCidade.clear();
++        cad_txtCpf.clear();
++        cad_txtMat.clear();
++        cad_txtComplemento.clear();
++        cad_txtRua.clear();
++        cad_txtTel.clear();
++        cad_txtNum.clear();
++        cad_radioAdmin.setSelected(false);
++        cad_radioAluno.setSelected(false);
++        cad_radioProfessor.setSelected(false);
+     }
+     public void mensagemSucesso(String nome, char acesso){
+ 
+@@ -283,4 +314,19 @@
+         }
+         return FXCollections.emptyObservableList();
+     }
++
++    public void voltar(ActionEvent event) throws IOException {
++        FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAdmin.fxml"));
++        Parent novaCenaParent = fxmloader.load();
++        Scene novaCena = new Scene(novaCenaParent);
++        TelaAdminController controller = fxmloader.getController();
++        user.setNome(nomeAdmin.getText());
++        user.setCpf(matriculaAdmin.getText());
++        controller.initData(user);
++        //Pega a informação do Stage
++        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
++        //novaCena.setFill(javafx.scene.paint.Color.TRANSPARENT);
++        window.setScene(novaCena);
++        window.show();
++    }
+ }
+Index: src/main/resources/view/TelaCadastro.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.RadioButton?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.control.ToggleGroup?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.layout.HBox?>\r\n<?import javafx.scene.layout.VBox?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"720.0\" prefWidth=\"1280.0\" xmlns=\"http://javafx.com/javafx/18\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"controller.TelaCadastroController\">\r\n   <children>\r\n      <VBox layoutX=\"336.0\" layoutY=\"230.0\" prefHeight=\"720.0\" prefWidth=\"1280.0\" AnchorPane.bottomAnchor=\"0.0\" AnchorPane.leftAnchor=\"0.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"0.0\">\r\n         <children>\r\n            <HBox fx:id=\"topTitle\" alignment=\"CENTER\" prefHeight=\"65.0\" prefWidth=\"1280.0\" styleClass=\"topTile\" stylesheets=\"@../css/loguinStyle.css\">\r\n               <children>\r\n                  <Label text=\"EasyAcademy\" textFill=\"WHITE\">\r\n                     <font>\r\n                        <Font name=\"System Bold\" size=\"38.0\" />\r\n                     </font>\r\n                  </Label>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"618.0\" prefWidth=\"1280.0\">\r\n               <children>\r\n                  <VBox prefHeight=\"618.0\" prefWidth=\"1280.0\">\r\n                     <children>\r\n                        <HBox alignment=\"TOP_CENTER\" prefHeight=\"41.0\" prefWidth=\"1280.0\" styleClass=\"borderTitle\" stylesheets=\"@../css/adminStyle.css\">\r\n                           <children>\r\n                              <Label styleClass=\"textTitle\" stylesheets=\"@../css/alunoStyle.css\" text=\"Administrador\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"28.0\" />\r\n                                 </font>\r\n                              </Label>\r\n                           </children>\r\n                        </HBox>\r\n                        <HBox prefHeight=\"37.0\" prefWidth=\"1280.0\" styleClass=\"idComponent\" stylesheets=\"@../css/alunoStyle.css\">\r\n                           <VBox.margin>\r\n                              <Insets />\r\n                           </VBox.margin>\r\n                           <children>\r\n                              <HBox prefHeight=\"100.0\" prefWidth=\"1080.0\" spacing=\"5.0\">\r\n                                 <children>\r\n                                    <Label fx:id=\"nomeAdmin\" text=\"nomeAdmin\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label text=\"|\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label fx:id=\"matriculaAdmin\" text=\"matricula\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                                 <padding>\r\n                                    <Insets left=\"20.0\" />\r\n                                 </padding>\r\n                              </HBox>\r\n                              <HBox alignment=\"CENTER_RIGHT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n                                 <opaqueInsets>\r\n                                    <Insets />\r\n                                 </opaqueInsets>\r\n                                 <padding>\r\n                                    <Insets right=\"20.0\" />\r\n                                 </padding>\r\n                                 <children>\r\n                                    <Label styleClass=\"logout\" stylesheets=\"@../css/alunoStyle.css\" text=\"Voltar\">\r\n                                       <font>\r\n                                          <Font name=\"System Bold\" size=\"16.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                              </HBox>\r\n                           </children>\r\n                        </HBox>\r\n                        <HBox alignment=\"CENTER_LEFT\" prefHeight=\"32.0\" prefWidth=\"1280.0\" styleClass=\"subtitle-cadastrar\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                           <children>\r\n                              <Label text=\"Cadastro de Usuário\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"15.0\" />\r\n                                 </font>\r\n                              </Label>\r\n                           </children>\r\n                           <padding>\r\n                              <Insets left=\"20.0\" />\r\n                           </padding>\r\n                        </HBox>\r\n                        <VBox prefHeight=\"510.0\" prefWidth=\"1280.0\" spacing=\"5.0\">\r\n                           <children>\r\n                              <HBox alignment=\"CENTER_LEFT\" prefHeight=\"28.0\" prefWidth=\"1259.0\" spacing=\"15.0\">\r\n                                 <children>\r\n                                    <Label text=\"Tipo de Usuário\">\r\n                                       <font>\r\n                                          <Font name=\"System Bold\" size=\"15.0\" />\r\n                                       </font>\r\n                                       <HBox.margin>\r\n                                          <Insets />\r\n                                       </HBox.margin>\r\n                                    </Label>\r\n                                    <RadioButton fx:id=\"cad_radioAdmin\" mnemonicParsing=\"false\" text=\"Administrador\">\r\n                                       <font>\r\n                                          <Font size=\"15.0\" />\r\n                                       </font>\r\n                                       <toggleGroup>\r\n                                          <ToggleGroup fx:id=\"cad_toggleSelect\" />\r\n                                       </toggleGroup>\r\n                                    </RadioButton>\r\n                                    <RadioButton fx:id=\"cad_radioProfessor\" layoutX=\"141.0\" layoutY=\"13.0\" mnemonicParsing=\"false\" text=\"Professor\" toggleGroup=\"$cad_toggleSelect\">\r\n                                       <font>\r\n                                          <Font size=\"15.0\" />\r\n                                       </font>\r\n                                    </RadioButton>\r\n                                    <RadioButton fx:id=\"cad_radioAluno\" layoutX=\"265.0\" layoutY=\"13.0\" mnemonicParsing=\"false\" text=\"Aluno\" toggleGroup=\"$cad_toggleSelect\">\r\n                                       <font>\r\n                                          <Font size=\"15.0\" />\r\n                                       </font>\r\n                                    </RadioButton>\r\n                                 </children>\r\n                                 <padding>\r\n                                    <Insets left=\"5.0\" right=\"5.0\" />\r\n                                 </padding>\r\n                              </HBox>\r\n                              <HBox prefHeight=\"26.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"Nome\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"5.0\" />\r\n                                       </padding></HBox>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"CPF\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                             <HBox.margin>\r\n                                                <Insets right=\"295.0\" />\r\n                                             </HBox.margin>\r\n                                          </Label>\r\n                                          <Label layoutX=\"20.0\" layoutY=\"15.0\" text=\"Matricula\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" />\r\n                                       </padding></HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"20.0\" prefHeight=\"42.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"CENTER_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtNome\" minWidth=\"-Infinity\" prefHeight=\"26.0\" prefWidth=\"602.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"CENTER_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"42.0\" prefWidth=\"306.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtCpf\" prefHeight=\"26.0\" prefWidth=\"284.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"CENTER_LEFT\" layoutX=\"656.0\" layoutY=\"10.0\" prefHeight=\"42.0\" prefWidth=\"306.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtMat\" prefHeight=\"26.0\" prefWidth=\"284.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"20.0\" prefHeight=\"26.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"Rua\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"5.0\" />\r\n                                       </padding>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"Nº\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                             <HBox.margin>\r\n                                                <Insets right=\"150.0\" />\r\n                                             </HBox.margin>\r\n                                          </Label>\r\n                                          <Label layoutX=\"20.0\" layoutY=\"15.0\" text=\"CEP\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" />\r\n                                       </padding>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"52.0\" prefHeight=\"42.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"CENTER_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtRua\" minWidth=\"-Infinity\" prefHeight=\"26.0\" prefWidth=\"602.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"CENTER_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"42.0\" prefWidth=\"143.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtNum\" prefHeight=\"26.0\" prefWidth=\"444.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"CENTER_LEFT\" layoutX=\"656.0\" layoutY=\"10.0\" prefHeight=\"42.0\" prefWidth=\"306.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtCep\" prefHeight=\"26.0\" prefWidth=\"444.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"20.0\" prefHeight=\"26.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"Cidade\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"5.0\" />\r\n                                       </padding>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"Complemento\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" />\r\n                                       </padding>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"52.0\" prefHeight=\"42.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"CENTER_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtCidade\" minWidth=\"-Infinity\" prefHeight=\"26.0\" prefWidth=\"602.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"CENTER_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"42.0\" prefWidth=\"620.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtComplemento\" prefHeight=\"26.0\" prefWidth=\"601.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"210.0\" prefHeight=\"26.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <children>\r\n                                          <Label text=\"Telefone\">\r\n                                             <font>\r\n                                                <Font name=\"System Bold\" size=\"15.0\" />\r\n                                             </font>\r\n                                          </Label>\r\n                                       </children>\r\n                                       <padding>\r\n                                          <Insets left=\"5.0\" />\r\n                                       </padding>\r\n                                    </HBox>\r\n                                    <HBox alignment=\"BOTTOM_LEFT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"620.0\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" />\r\n                                       </padding>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox layoutX=\"20.0\" layoutY=\"241.0\" prefHeight=\"42.0\" prefWidth=\"1259.0\" spacing=\"20.0\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                 <children>\r\n                                    <HBox alignment=\"CENTER_LEFT\" prefHeight=\"100.0\" prefWidth=\"620.0\" styleClass=\"bordaCampos\" stylesheets=\"@../css/cadUserStyle.css\">\r\n                                       <padding>\r\n                                          <Insets left=\"10.0\" right=\"10.0\" />\r\n                                       </padding>\r\n                                       <children>\r\n                                          <TextField fx:id=\"cad_txtTel\" minWidth=\"-Infinity\" prefHeight=\"26.0\" prefWidth=\"602.0\" />\r\n                                       </children>\r\n                                    </HBox>\r\n                                 </children>\r\n                              </HBox>\r\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"63.0\" prefWidth=\"1259.0\">\r\n                                 <children>\r\n                                    <Button mnemonicParsing=\"false\" onAction=\"#cadastrar\" prefHeight=\"66.0\" prefWidth=\"358.0\" stylesheets=\"@../css/cadUserStyle.css\" text=\"Cadastrar\">\r\n                                       <font>\r\n                                          <Font name=\"System Bold\" size=\"28.0\" />\r\n                                       </font>\r\n                                    </Button>\r\n                                 </children>\r\n                                 <opaqueInsets>\r\n                                    <Insets />\r\n                                 </opaqueInsets>\r\n                                 <VBox.margin>\r\n                                    <Insets top=\"20.0\" />\r\n                                 </VBox.margin>\r\n                              </HBox>\r\n                           </children>\r\n                           <padding>\r\n                              <Insets bottom=\"10.0\" left=\"10.0\" right=\"10.0\" top=\"10.0\" />\r\n                           </padding>\r\n                        </VBox>\r\n                     </children>\r\n                  </VBox>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"34.0\" prefWidth=\"1280.0\" styleClass=\"footerInfo\" stylesheets=\"@../css/loguinStyle.css\">\r\n               <children>\r\n                  <Label text=\"desenvolvedoresID\" textFill=\"#7e7e7e\" />\r\n               </children></HBox>\r\n         </children>\r\n      </VBox>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/view/TelaCadastro.fxml b/src/main/resources/view/TelaCadastro.fxml
+--- a/src/main/resources/view/TelaCadastro.fxml	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/resources/view/TelaCadastro.fxml	(date 1654735881522)
+@@ -72,11 +72,7 @@
+                                     <Insets right="20.0" />
+                                  </padding>
+                                  <children>
+-                                    <Label styleClass="logout" stylesheets="@../css/alunoStyle.css" text="Voltar">
+-                                       <font>
+-                                          <Font name="System Bold" size="16.0" />
+-                                       </font>
+-                                    </Label>
++                                    <Button mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+                                  </children>
+                               </HBox>
+                            </children>
+Index: src/main/java/controller/TelaAdminController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Label;\r\nimport javafx.stage.Stage;\r\nimport model.Usuario;\r\n\r\nimport java.io.IOException;\r\nimport java.net.URL;\r\nimport java.util.ResourceBundle;\r\n\r\npublic class TelaAdminController implements Initializable {\r\n\r\n    private Usuario user;\r\n    @FXML\r\n    private Label nomeAdmin;\r\n\r\n    @FXML\r\n    private Label matriculaAdmin;\r\n    @Override\r\n    public void initialize(URL location, ResourceBundle resources) {\r\n\r\n    }\r\n\r\n    public void deslogar(ActionEvent event) throws IOException {\r\n        //FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaLogin.fxml\"));\r\n        Parent novaCenaParent = FXMLLoader.load(getClass().getClassLoader().getResource(\"view/TelaLogin.fxml\"));\r\n        Scene novaCena = new Scene(novaCenaParent);\r\n\r\n        //Pega a informação do Stage\r\n        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n        //novaCena.setFill(javafx.scene.paint.Color.TRANSPARENT);\r\n        window.setScene(novaCena);\r\n        window.show();\r\n\r\n\r\n    }\r\n\r\n    public void goCadastro(ActionEvent event) throws IOException {\r\n        FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaCadastro.fxml\"));\r\n        Parent root = fxmloader.load();\r\n        Scene novaCena = new Scene(root);\r\n        //Da acesso ao controller do ExibirAluno;\r\n        TelaCadastroController controller = fxmloader.getController();\r\n        user.setNome(nomeAdmin.getText());\r\n        user.setCpf(matriculaAdmin.getText());\r\n        controller.initData(user);\r\n        //Pega a informação do Stage\r\n        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n        window.setScene(novaCena);\r\n        window.show();\r\n    }\r\n\r\n    public void initData(Usuario usuario){\r\n        user = usuario;\r\n        nomeAdmin.setText(user.getNome());\r\n        matriculaAdmin.setText(user.getCpf());\r\n    }\r\n\r\n    public void fechar(){\r\n        System.exit(0);\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/TelaAdminController.java b/src/main/java/controller/TelaAdminController.java
+--- a/src/main/java/controller/TelaAdminController.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/controller/TelaAdminController.java	(date 1654735737612)
+@@ -38,8 +38,6 @@
+         //novaCena.setFill(javafx.scene.paint.Color.TRANSPARENT);
+         window.setScene(novaCena);
+         window.show();
+-
+-
+     }
+ 
+     public void goCadastro(ActionEvent event) throws IOException {
+Index: src/main/java/model/Professor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\nimport java.io.Serializable;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class Professor extends Usuario implements Serializable {\r\n    private static final long serialVersionUID = 1L;\r\n    private List<String> turmasLecionadas; //cod.Turma\r\n\r\n    public Professor(List<Disciplina> discpLec) {\r\n        this.turmasLecionadas = new ArrayList<>(6);\r\n    }\r\n\r\n    public Professor(String cpf, String nome, Endereco endereco, List<Disciplina> discpLec) {\r\n        super(cpf, nome, endereco);\r\n        this.turmasLecionadas = new ArrayList<>(6);\r\n    }\r\n\r\n    public List<String> getTurmasLecionadas() {\r\n        return turmasLecionadas;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/model/Professor.java b/src/main/java/model/Professor.java
+--- a/src/main/java/model/Professor.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/model/Professor.java	(date 1654733079062)
+@@ -7,6 +7,10 @@
+     private static final long serialVersionUID = 1L;
+     private List<String> turmasLecionadas; //cod.Turma
+ 
++    public Professor(){
++
++    }
++
+     public Professor(List<Disciplina> discpLec) {
+         this.turmasLecionadas = new ArrayList<>(6);
+     }
+Index: src/main/resources/view/TelaAluno.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.layout.ColumnConstraints?>\r\n<?import javafx.scene.layout.GridPane?>\r\n<?import javafx.scene.layout.HBox?>\r\n<?import javafx.scene.layout.RowConstraints?>\r\n<?import javafx.scene.layout.VBox?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"720.0\" prefWidth=\"1280.0\" xmlns=\"http://javafx.com/javafx/18\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"controller.TelaLoginController\">\r\n   <children>\r\n      <VBox layoutX=\"336.0\" layoutY=\"230.0\" prefHeight=\"720.0\" prefWidth=\"1280.0\" AnchorPane.bottomAnchor=\"0.0\" AnchorPane.leftAnchor=\"0.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"0.0\">\r\n         <children>\r\n            <HBox fx:id=\"topTitle\" alignment=\"CENTER\" prefHeight=\"65.0\" prefWidth=\"1280.0\" styleClass=\"topTile\" stylesheets=\"@../css/loguinStyle.css\">\r\n               <children>\r\n                  <Label text=\"EasyAcademy\" textFill=\"WHITE\">\r\n                     <font>\r\n                        <Font name=\"System Bold\" size=\"38.0\" />\r\n                     </font>\r\n                  </Label>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"618.0\" prefWidth=\"1280.0\">\r\n               <children>\r\n                  <VBox prefHeight=\"618.0\" prefWidth=\"1280.0\">\r\n                     <children>\r\n                        <HBox alignment=\"TOP_CENTER\" prefHeight=\"41.0\" prefWidth=\"1280.0\" styleClass=\"borderTitle\" stylesheets=\"@../css/alunoStyle.css\">\r\n                           <children>\r\n                              <Label styleClass=\"textTitle\" stylesheets=\"@../css/alunoStyle.css\" text=\"Portal do Aluno\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"28.0\" />\r\n                                 </font>\r\n                              </Label>\r\n                           </children>\r\n                        </HBox>\r\n                        <HBox prefHeight=\"37.0\" prefWidth=\"1280.0\" styleClass=\"idComponent\" stylesheets=\"@../css/alunoStyle.css\">\r\n                           <VBox.margin>\r\n                              <Insets />\r\n                           </VBox.margin>\r\n                           <children>\r\n                              <HBox prefHeight=\"100.0\" prefWidth=\"1080.0\" spacing=\"5.0\">\r\n                                 <children>\r\n                                    <Label text=\"nomeAluno\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label text=\"|\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label text=\"matricula\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                                 <padding>\r\n                                    <Insets left=\"20.0\" />\r\n                                 </padding>\r\n                              </HBox>\r\n                              <HBox alignment=\"CENTER_RIGHT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n                                 <opaqueInsets>\r\n                                    <Insets />\r\n                                 </opaqueInsets>\r\n                                 <padding>\r\n                                    <Insets right=\"20.0\" />\r\n                                 </padding>\r\n                                 <children>\r\n                                    <Label styleClass=\"logout\" stylesheets=\"@../css/alunoStyle.css\" text=\"Logout\">\r\n                                       <font>\r\n                                          <Font name=\"System Bold\" size=\"16.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                              </HBox>\r\n                           </children>\r\n                        </HBox>\r\n                        <GridPane hgap=\"10.0\" prefHeight=\"540.0\" prefWidth=\"1280.0\">\r\n                          <columnConstraints>\r\n                            <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                          </columnConstraints>\r\n                          <rowConstraints>\r\n                            <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />\r\n                            <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />\r\n                          </rowConstraints>\r\n                           <children>\r\n                              <Button mnemonicParsing=\"false\" prefHeight=\"251.0\" prefWidth=\"344.0\" stylesheets=\"@../css/alunoStyle.css\" text=\"Informações Acadêmicas\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"24.0\" />\r\n                                 </font>\r\n                              </Button>\r\n                              <Button mnemonicParsing=\"false\" prefHeight=\"251.0\" prefWidth=\"344.0\" stylesheets=\"@../css/alunoStyle.css\" text=\"Downloads de Documentos\" GridPane.rowIndex=\"1\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"24.0\" />\r\n                                 </font>\r\n                              </Button>\r\n                           </children>\r\n                        </GridPane>\r\n                     </children>\r\n                  </VBox>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"34.0\" prefWidth=\"1280.0\" styleClass=\"footerInfo\" stylesheets=\"@../css/loguinStyle.css\">\r\n               <children>\r\n                  <Label text=\"desenvolvedoresID\" textFill=\"#7e7e7e\" />\r\n               </children></HBox>\r\n         </children>\r\n      </VBox>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/view/TelaAluno.fxml b/src/main/resources/view/TelaAluno.fxml
+--- a/src/main/resources/view/TelaAluno.fxml	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/resources/view/TelaAluno.fxml	(date 1654739565858)
+@@ -11,7 +11,7 @@
+ <?import javafx.scene.layout.VBox?>
+ <?import javafx.scene.text.Font?>
+ 
+-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaLoginController">
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaAlunoController">
+    <children>
+       <VBox layoutX="336.0" layoutY="230.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+Index: src/main/java/model/Telefone.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\n\r\npublic class Telefone {\r\n    private static final long serialVersionUID = 1L;\r\n    private String numero;\r\n    private String ddd;\r\n\r\n    public Telefone() {\r\n    }\r\n\r\n    public String getNumero() {\r\n        return numero;\r\n    }\r\n\r\n    public void setNumero(String numero) {\r\n        this.numero = numero;\r\n    }\r\n\r\n    public String getDdd() {\r\n        return ddd;\r\n    }\r\n\r\n    public void setDdd(String ddd) {\r\n        this.ddd = ddd;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/model/Telefone.java b/src/main/java/model/Telefone.java
+--- a/src/main/java/model/Telefone.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/model/Telefone.java	(date 1654733365751)
+@@ -1,6 +1,7 @@
+ package model;
++import java.io.Serializable;
+ 
+-public class Telefone {
++public class Telefone implements Serializable {
+     private static final long serialVersionUID = 1L;
+     private String numero;
+     private String ddd;
+Index: src/main/java/controller/TelaLoginController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\r\n\r\nimport javafx.collections.FXCollections;\r\nimport javafx.collections.ObservableList;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.PasswordField;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.stage.Stage;\r\nimport model.Usuario;\r\nimport utils.ResourceManager;\r\n\r\n\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.net.URL;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.ResourceBundle;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\n\r\npublic class TelaLoginController implements Initializable {\r\n    @FXML\r\n    private Label msgErroLogin;\r\n    @FXML\r\n    private TextField txtUser;\r\n    @FXML\r\n    private PasswordField txtPass;\r\n    @FXML\r\n    private ImageView imgLogotipo;\r\n\r\n    @FXML\r\n    private ObservableList<Usuario> users = FXCollections.observableArrayList();\r\n\r\n    private Usuario usuario;\r\n\r\n    private File file = new File(\"src/main/resources/Arquivos/listaUsuarios.pjt\");\r\n\r\n    @Override\r\n    public void initialize(URL location, ResourceBundle resources) {\r\n        if(file.exists()){\r\n            users = carregarUsuarios();\r\n        }else{\r\n            salvarUsuarios();\r\n        }\r\n    }\r\n\r\n    @FXML\r\n    public void logar(ActionEvent event) throws IOException {\r\n        if(txtUser.getText().isEmpty() && txtPass.getText().isEmpty()){\r\n            msgErroLogin.setText(\"Campos de login e senha obrigatórios\");\r\n            msgErroLogin.setVisible(true);\r\n        } else if (txtUser.getText().equals(\"admin\") && txtPass.getText().equals(\"admin\")) {\r\n            usuario = new Usuario();\r\n            usuario.setCpf(\"777777777-77\");\r\n            usuario.setNome(\"ADMINISTRADOR ALTO NÍVEL\");\r\n            FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaAdmin.fxml\"));\r\n\r\n            Parent root = fxmloader.load();\r\n            Scene novaCena = new Scene(root);\r\n            //Da acesso ao controller do ExibirAluno;\r\n            TelaAdminController controller = fxmloader.getController();\r\n            controller.initData(usuario);\r\n            //Pega a informação do Stage\r\n            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n            window.setScene(novaCena);\r\n            window.show();\r\n            //Change to the next screen;\r\n        }else if (checkCredencials()){\r\n            Usuario user = getUsuario();\r\n\r\n            if(user.getAcesso() == 'A'){\r\n                FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaAdmin.fxml\"));\r\n                Parent root = fxmloader.load();\r\n                Scene novaCena = new Scene(root);\r\n                //Da acesso ao controller do ExibirAluno;\r\n                TelaAdminController controller = fxmloader.getController();\r\n                controller.initData(usuario);\r\n                //Pega a informação do Stage\r\n                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n                window.setScene(novaCena);\r\n                window.show();\r\n            } else if (user.getAcesso() == 'E') {\r\n                FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaAluno.fxml\"));\r\n                Parent root = fxmloader.load();\r\n                Scene novaCena = new Scene(root);\r\n                //Da acesso ao controller do Exibir Aluno;\r\n                TelaAlunoController controller = fxmloader.getController();\r\n                controller.initData(usuario);\r\n                //Pega a informação do Stage\r\n                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n                window.setScene(novaCena);\r\n                window.show();\r\n            } else if (user.getAcesso() == 'P') {\r\n                FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource(\"view/TelaProfessor.fxml\"));\r\n                Parent root = fxmloader.load();\r\n                Scene novaCena = new Scene(root);\r\n                //Da acesso ao controller do Tela Professor;\r\n                TelaProfessorController controller = fxmloader.getController();\r\n                controller.initData(usuario);\r\n                //Pega a informação do Stage\r\n                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();\r\n                window.setScene(novaCena);\r\n                window.show();\r\n            }\r\n        }\r\n    }\r\n\r\n    private ObservableList<Usuario> carregarUsuarios() {\r\n        try {\r\n            List<Usuario> list = (List<Usuario>) ResourceManager.load(\"src/main/resources/Arquivos/listaUsuarios.pjt\");\r\n            return FXCollections.observableArrayList(list);\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n        return FXCollections.emptyObservableList();\r\n    }\r\n\r\n    //Salvar\r\n    private void salvarUsuarios() {\r\n        ArrayList<Usuario> tempList = new ArrayList<>(users);\r\n        try {\r\n            ResourceManager.save(tempList, \"src/main/resources/Arquivos/listaUsuarios.pjt\");\r\n        } catch (Exception ex) {\r\n            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    private boolean checkCredencials(){\r\n        for(Usuario usuario : users){\r\n            if(usuario.getCpf().compareTo(txtUser.getText())==0 && usuario.getSenha().compareTo(txtPass.getText())==0){\r\n                return true;\r\n            }\r\n        }\r\n        return false;\r\n    }\r\n\r\n    private Usuario getUsuario(){\r\n        for(Usuario user : users){\r\n            if(user.getCpf().compareTo(txtUser.getText()) == 0){\r\n                usuario = user;\r\n                return user;\r\n            }\r\n        }\r\n        return null;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/TelaLoginController.java b/src/main/java/controller/TelaLoginController.java
+--- a/src/main/java/controller/TelaLoginController.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/controller/TelaLoginController.java	(date 1654738442429)
+@@ -14,6 +14,8 @@
+ import javafx.scene.control.TextField;
+ import javafx.scene.image.ImageView;
+ import javafx.stage.Stage;
++import model.Aluno;
++import model.Professor;
+ import model.Usuario;
+ import utils.ResourceManager;
+ 
+@@ -41,22 +43,38 @@
+     @FXML
+     private ObservableList<Usuario> users = FXCollections.observableArrayList();
+ 
++    private ObservableList<Aluno> alunos = FXCollections.observableArrayList();
++
++    private ObservableList<Professor> professores = FXCollections.observableArrayList();
++
+     private Usuario usuario;
+ 
++    private Aluno aluno;
++
++    private Professor professor;
++
+     private File file = new File("src/main/resources/Arquivos/listaUsuarios.pjt");
+ 
++    private File fileA = new File("src/main/resources/Arquivos/listaAlunos.pjt");
++
++    private File fileP = new File("src/main/resources/Arquivos/listaProfessores.pjt");
++
+     @Override
+     public void initialize(URL location, ResourceBundle resources) {
+         if(file.exists()){
+             users = carregarUsuarios();
+-        }else{
+-            salvarUsuarios();
++        }
++        if(fileA.exists()) {
++            alunos = carregarAlunos();
++        }
++        if(fileP.exists()){
++            professores = carregarProfessores();
+         }
+     }
+ 
+     @FXML
+     public void logar(ActionEvent event) throws IOException {
+-        if(txtUser.getText().isEmpty() && txtPass.getText().isEmpty()){
++        if(txtUser.getText().isEmpty() || txtPass.getText().isEmpty()){
+             msgErroLogin.setText("Campos de login e senha obrigatórios");
+             msgErroLogin.setVisible(true);
+         } else if (txtUser.getText().equals("admin") && txtPass.getText().equals("admin")) {
+@@ -75,8 +93,18 @@
+             window.setScene(novaCena);
+             window.show();
+             //Change to the next screen;
+-        }else if (checkCredencials()){
+-            Usuario user = getUsuario();
++        }else if (checkCredencials() != 'N'){
++            Usuario user = new Usuario();
++            Professor prof = new Professor();
++            Aluno alun = new Aluno();
++
++            if(checkCredencials() == 'A')
++                user = getUsuario();
++            else if(checkCredencials() == 'P')
++                prof = getProfessor();
++            else if(checkCredencials() == 'E')
++                alun = getAluno();
++
+ 
+             if(user.getAcesso() == 'A'){
+                 FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAdmin.fxml"));
+@@ -89,7 +117,7 @@
+                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                 window.setScene(novaCena);
+                 window.show();
+-            } else if (user.getAcesso() == 'E') {
++            } else if (alun.getAcesso() == 'E') {
+                 FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaAluno.fxml"));
+                 Parent root = fxmloader.load();
+                 Scene novaCena = new Scene(root);
+@@ -100,7 +128,7 @@
+                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                 window.setScene(novaCena);
+                 window.show();
+-            } else if (user.getAcesso() == 'P') {
++            } else if (prof.getAcesso() == 'P') {
+                 FXMLLoader fxmloader = new FXMLLoader(getClass().getClassLoader().getResource("view/TelaProfessor.fxml"));
+                 Parent root = fxmloader.load();
+                 Scene novaCena = new Scene(root);
+@@ -125,6 +153,28 @@
+         return FXCollections.emptyObservableList();
+     }
+ 
++    private ObservableList<Aluno> carregarAlunos() {
++        try {
++            List<Aluno> list = (List<Aluno>) ResourceManager.load("src/main/resources/Arquivos/listaAlunos.pjt");
++            return FXCollections.observableArrayList(list);
++        } catch (Exception ex) {
++            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
++        }
++        return FXCollections.emptyObservableList();
++    }
++
++
++    private ObservableList<Professor> carregarProfessores() {
++        try {
++            List<Professor> list = (List<Professor>) ResourceManager.load("src/main/resources/Arquivos/listaProfessores.pjt");
++            return FXCollections.observableArrayList(list);
++        } catch (Exception ex) {
++            Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
++        }
++        return FXCollections.emptyObservableList();
++    }
++
++
+     //Salvar
+     private void salvarUsuarios() {
+         ArrayList<Usuario> tempList = new ArrayList<>(users);
+@@ -135,13 +185,25 @@
+         }
+     }
+ 
+-    private boolean checkCredencials(){
++    private char checkCredencials(){
+         for(Usuario usuario : users){
+             if(usuario.getCpf().compareTo(txtUser.getText())==0 && usuario.getSenha().compareTo(txtPass.getText())==0){
+-                return true;
++                return 'A';
+             }
+         }
+-        return false;
++
++        for(Professor professor : professores){
++            if(professor.getCpf().compareTo(txtUser.getText())==0 && professor.getSenha().compareTo(txtPass.getText())==0){
++                return 'P';
++            }
++        }
++
++        for(Aluno aluno : alunos){
++            if(aluno.getCpf().compareTo(txtUser.getText())==0 && aluno.getSenha().compareTo(txtPass.getText())==0){
++                return 'E';
++            }
++        }
++        return 'N';
+     }
+ 
+     private Usuario getUsuario(){
+@@ -153,4 +215,24 @@
+         }
+         return null;
+     }
++
++    private Aluno getAluno(){
++        for(Aluno alun : alunos){
++            if(alun.getCpf().compareTo(txtUser.getText()) == 0){
++                aluno = alun;
++                return alun;
++            }
++        }
++        return null;
++    }
++
++    private Professor getProfessor(){
++        for(Professor prof : professores){
++            if(prof.getCpf().compareTo(txtUser.getText()) == 0){
++                professor = prof;
++                return prof;
++            }
++        }
++        return null;
++    }
+ }
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"6607c7c2-7cfb-4911-866e-0eee6bea1f74\" name=\"Changes\" comment=\"[Ayrton] Ultima view adicionada\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"29KvSv6JuX0QQvGqZLbcwEIKSoC\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/Projetos Java Unicap/EasyAcademy/src/main/resources/css&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Projetos Java Unicap\\EasyAcademy\\src\\main\\resources\\css\" />\r\n      <recent name=\"D:\\Projetos Java Unicap\\EasyAcademy\\src\\main\\resources\\view\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Projetos Java Unicap\\EasyAcademy\\src\\main\\java\" />\r\n      <recent name=\"D:\\Projetos Java Unicap\\EasyAcademy\\src\\main\\resources\" />\r\n      <recent name=\"D:\\Projetos Java Unicap\\EasyAcademy\\src\\main\\resources\\view\" />\r\n      <recent name=\"D:\\Projetos Java Unicap\\EasyAcademy\\src\\main\\java\\org\\openjfx\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"MainApp\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.openjfx.MainApp\" />\r\n      <module name=\"EasyAcademy.main\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"6607c7c2-7cfb-4911-866e-0eee6bea1f74\" name=\"Changes\" comment=\"\" />\r\n      <created>1652874599441</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1652874599441</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx\">\r\n      <created>1654195539126</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654195539126</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"[Ayrton] Atualização:&#10;- Correções e testes em função do controller de TelaLogin.fxml\">\r\n      <created>1654202213130</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654202213130</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml\">\r\n      <created>1654444617332</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654444617332</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"[Ayrton] Atualização:&#10;- Correção de função\">\r\n      <created>1654460710038</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654460710038</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"[Ayrton] Atualização:&#10;- Correção de função&#10;- Add Arquivo\">\r\n      <created>1654460750480</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654460750480</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"[Ayrton] Atualização:&#10;- Correção de função&#10;- Comment add\">\r\n      <created>1654461512961</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654461512961</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"[Ayrton] Atualização:&#10;- Correção de função&#10;- Comment add\">\r\n      <created>1654461748632</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654461748632</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"[Ayrton] Adições:&#10;- Tela CadastroDisicplina&#10;- Tela CadastroTurma&#10;- Tela Atribuir (nota e faltas)\">\r\n      <created>1654616852680</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654616852680</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"[Ayrton] Continuidade e adição de telas.\">\r\n      <created>1654638866820</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654638866820</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml\">\r\n      <created>1654692911838</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654692911838</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml\">\r\n      <created>1654693040667</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654693040667</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml\">\r\n      <created>1654693220741</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654693220742</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml\">\r\n      <created>1654696274525</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654696274525</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"[Ayrton] Continuidade:&#10;- Models modoficados e atualizados\">\r\n      <created>1654697311561</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654697311561</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2\">\r\n      <created>1654698787898</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654698787898</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml\">\r\n      <created>1654706935910</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654706935910</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"[Ayrton] Ultima view adicionada\">\r\n      <created>1654709538635</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654709538635</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"[Ayrton] Atualização:&#10;- Add Package Utils&#10; - Add Classe Conexao&#10; - Add Classe RegEx\" />\r\n    <MESSAGE value=\"[Ayrton] Atualização:&#10;- Correções e testes em função do controller de TelaLogin.fxml\" />\r\n    <MESSAGE value=\"[Ayrton] Atualização:&#10;- Add TelaAluno.fxml&#10;- Add TelaProfessor.fxml&#10;- Add TelaAdmin.fxml\" />\r\n    <MESSAGE value=\"[Ayrton] Atualização:&#10;- Correção de função\" />\r\n    <MESSAGE value=\"[Ayrton] Atualização:&#10;- Correção de função&#10;- Add Arquivo\" />\r\n    <MESSAGE value=\"[Ayrton] Atualização:&#10;- Correção de função&#10;- Comment add\" />\r\n    <MESSAGE value=\"[Ayrton] Adições:&#10;- Tela CadastroDisicplina&#10;- Tela CadastroTurma&#10;- Tela Atribuir (nota e faltas)\" />\r\n    <MESSAGE value=\"[Ayrton] Continuidade e adição de telas.\" />\r\n    <MESSAGE value=\"[Ayrton] Continuidade e adição de telas.&#10;- TelaInformacaoUsuario.fxml\" />\r\n    <MESSAGE value=\"[Ayrton] Continuidade e adição de telas.&#10;- TelaAlterarUsuario.fxml&#10;- Modificação em TelaAluno.fxml\" />\r\n    <MESSAGE value=\"[Ayrton] Continuidade:&#10;- Models modoficados e atualizados\" />\r\n    <MESSAGE value=\"[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2\" />\r\n    <MESSAGE value=\"[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml\" />\r\n    <MESSAGE value=\"[Ayrton] Ultima view adicionada\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"[Ayrton] Ultima view adicionada\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/.idea/workspace.xml	(date 1654739723712)
+@@ -4,9 +4,21 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Ultima view adicionada">
++    <list default="true" id="6607c7c2-7cfb-4911-866e-0eee6bea1f74" name="Changes" comment="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaAdminController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaCadastroController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaLoginController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TelaProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TelaProfessorController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Aluno.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/model/Desempenho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Desempenho.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/model/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Professor.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/model/Telefone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Telefone.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/Arquivos/listaUsuarios.pjt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaAluno.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaAluno.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaCadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaCadastro.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/view/TelaProfessor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/TelaProfessor.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,7 +46,10 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="29KvSv6JuX0QQvGqZLbcwEIKSoC" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <OptionsSetting value="false" id="Update" />
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -198,14 +213,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1654706935910</updated>
+     </task>
+-    <task id="LOCAL-00017" summary="[Ayrton] Ultima view adicionada">
+-      <created>1654709538635</created>
+-      <option name="number" value="00017" />
+-      <option name="presentableId" value="LOCAL-00017" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1654709538635</updated>
+-    </task>
+-    <option name="localTasksCounter" value="18" />
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -233,8 +241,7 @@
+     <MESSAGE value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados" />
+     <MESSAGE value="[Ayrton] Continuidade:&#10;- Models modoficados e atualizados parte 2" />
+     <MESSAGE value="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml" />
+-    <MESSAGE value="[Ayrton] Ultima view adicionada" />
+-    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Ultima view adicionada" />
++    <option name="LAST_COMMIT_MESSAGE" value="[Ayrton] Continuidade adicionado telas:&#10;- InfoAcademica.fxml&#10;- ProfessorLecionar.fxml" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/main/java/model/Aluno.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\nimport java.io.Serializable;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class Aluno extends Usuario implements Serializable {\r\n    private static final long serialVersionUID = 1L;\r\n\r\n\r\n    private int  creditos;\r\n    private List<String> turmas; //cod.Turma\r\n    public Aluno(){\r\n\r\n    }\r\n\r\n\r\n\r\n    public Aluno(String cpf, String nome, Endereco endereco, Disciplina discpMat) {\r\n        super(cpf, nome, endereco);\r\n        this.turmas = new ArrayList<>(8);\r\n        this.creditos = 24;\r\n    }\r\n\r\n\r\n\r\n    public int getCreditos() {\r\n        return creditos;\r\n    }\r\n\r\n    public boolean subCredito(int valor){\r\n        if(this.creditos>=valor){\r\n            this.creditos -= valor;\r\n            return true;\r\n        }\r\n        return false;\r\n    }\r\n\r\n    public List<String> getTurmas() {\r\n        return turmas;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/model/Aluno.java b/src/main/java/model/Aluno.java
+--- a/src/main/java/model/Aluno.java	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/java/model/Aluno.java	(date 1654733074264)
+@@ -5,8 +5,6 @@
+ 
+ public class Aluno extends Usuario implements Serializable {
+     private static final long serialVersionUID = 1L;
+-
+-
+     private int  creditos;
+     private List<String> turmas; //cod.Turma
+     public Aluno(){
+Index: src/main/resources/view/TelaProfessor.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.net.URL?>\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.layout.ColumnConstraints?>\r\n<?import javafx.scene.layout.GridPane?>\r\n<?import javafx.scene.layout.HBox?>\r\n<?import javafx.scene.layout.RowConstraints?>\r\n<?import javafx.scene.layout.VBox?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"720.0\" prefWidth=\"1280.0\" xmlns=\"http://javafx.com/javafx/18\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"controller.TelaLoginController\">\r\n   <children>\r\n      <VBox layoutX=\"336.0\" layoutY=\"230.0\" prefHeight=\"720.0\" prefWidth=\"1280.0\" AnchorPane.bottomAnchor=\"0.0\" AnchorPane.leftAnchor=\"0.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"0.0\">\r\n         <children>\r\n            <HBox fx:id=\"topTitle\" alignment=\"CENTER\" prefHeight=\"65.0\" prefWidth=\"1280.0\" styleClass=\"topTile\" stylesheets=\"@../css/loguinStyle.css\">\r\n               <children>\r\n                  <Label text=\"EasyAcademy\" textFill=\"WHITE\">\r\n                     <font>\r\n                        <Font name=\"System Bold\" size=\"38.0\" />\r\n                     </font>\r\n                  </Label>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"618.0\" prefWidth=\"1280.0\">\r\n               <children>\r\n                  <VBox prefHeight=\"618.0\" prefWidth=\"1280.0\">\r\n                     <children>\r\n                        <HBox alignment=\"TOP_CENTER\" prefHeight=\"41.0\" prefWidth=\"1280.0\" styleClass=\"borderTitle\" stylesheets=\"@../css/professorStyle.css\">\r\n                           <children>\r\n                              <Label styleClass=\"textTitle\" stylesheets=\"@../css/alunoStyle.css\" text=\"Portal do Professor\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"28.0\" />\r\n                                 </font>\r\n                              </Label>\r\n                           </children>\r\n                        </HBox>\r\n                        <HBox prefHeight=\"37.0\" prefWidth=\"1280.0\" styleClass=\"idComponent\" stylesheets=\"@../css/alunoStyle.css\">\r\n                           <VBox.margin>\r\n                              <Insets />\r\n                           </VBox.margin>\r\n                           <children>\r\n                              <HBox prefHeight=\"100.0\" prefWidth=\"1080.0\" spacing=\"5.0\">\r\n                                 <children>\r\n                                    <Label text=\"nomeProfessor\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label text=\"|\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label text=\"matricula\">\r\n                                       <font>\r\n                                          <Font size=\"21.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                                 <padding>\r\n                                    <Insets left=\"20.0\" />\r\n                                 </padding>\r\n                              </HBox>\r\n                              <HBox alignment=\"CENTER_RIGHT\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n                                 <opaqueInsets>\r\n                                    <Insets />\r\n                                 </opaqueInsets>\r\n                                 <padding>\r\n                                    <Insets right=\"20.0\" />\r\n                                 </padding>\r\n                                 <children>\r\n                                    <Label styleClass=\"logout\" stylesheets=\"@../css/alunoStyle.css\" text=\"Logout\">\r\n                                       <font>\r\n                                          <Font name=\"System Bold\" size=\"16.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                              </HBox>\r\n                           </children>\r\n                        </HBox>\r\n                        <GridPane hgap=\"10.0\" prefHeight=\"540.0\" prefWidth=\"1280.0\">\r\n                          <columnConstraints>\r\n                            <ColumnConstraints halignment=\"RIGHT\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                            <ColumnConstraints halignment=\"LEFT\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                          </columnConstraints>\r\n                          <rowConstraints>\r\n                            <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />\r\n                            <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />\r\n                          </rowConstraints>\r\n                           <children>\r\n                              <Button mnemonicParsing=\"false\" prefHeight=\"251.0\" prefWidth=\"344.0\" text=\"Atribuir Notas\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"24.0\" />\r\n                                 </font>\r\n                                 <stylesheets>\r\n                                    <URL value=\"@../css/alunoStyle.css\" />\r\n                                    <URL value=\"@../css/professorStyle.css\" />\r\n                                 </stylesheets>\r\n                              </Button>\r\n                              <Button mnemonicParsing=\"false\" prefHeight=\"251.0\" prefWidth=\"344.0\" stylesheets=\"@../css/professorStyle.css\" text=\"Atribuir Faltas\" GridPane.columnIndex=\"1\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"24.0\" />\r\n                                 </font>\r\n                              </Button>\r\n                              <Button mnemonicParsing=\"false\" prefHeight=\"251.0\" prefWidth=\"344.0\" text=\"Alterar de Dados\" GridPane.rowIndex=\"1\">\r\n                                 <font>\r\n                                    <Font name=\"System Bold\" size=\"24.0\" />\r\n                                 </font>\r\n                                 <stylesheets>\r\n                                    <URL value=\"@../css/alunoStyle.css\" />\r\n                                    <URL value=\"@../css/professorStyle.css\" />\r\n                                 </stylesheets>\r\n                              </Button>\r\n                           </children>\r\n                        </GridPane>\r\n                     </children>\r\n                  </VBox>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"34.0\" prefWidth=\"1280.0\" styleClass=\"footerInfo\" stylesheets=\"@../css/loguinStyle.css\">\r\n               <children>\r\n                  <Label text=\"desenvolvedoresID\" textFill=\"#7e7e7e\" />\r\n               </children></HBox>\r\n         </children>\r\n      </VBox>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/view/TelaProfessor.fxml b/src/main/resources/view/TelaProfessor.fxml
+--- a/src/main/resources/view/TelaProfessor.fxml	(revision 6b065beda84aaead2b4f93e21b5c45e1790015e6)
++++ b/src/main/resources/view/TelaProfessor.fxml	(date 1654739435655)
+@@ -12,7 +12,7 @@
+ <?import javafx.scene.layout.VBox?>
+ <?import javafx.scene.text.Font?>
+ 
+-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaLoginController">
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaProfessorController">
+    <children>
+       <VBox layoutX="336.0" layoutY="230.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
